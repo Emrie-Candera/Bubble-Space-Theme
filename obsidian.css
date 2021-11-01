@@ -88,7 +88,7 @@
             --text-selection: var(--pink1);
             --text-on-accent: var(--white);
             --text-error: orange;
-            --interactive-accent: var(--purple3);
+            --interactive-accent: var(--purple2);
             --interactive-hover: white;
             --interactive-accent-hover: var(--dblue3);
           }
