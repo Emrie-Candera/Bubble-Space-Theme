@@ -50,6 +50,7 @@ Gif from [tk470](https://tenor.com/view/astronaut-float-space-gif-11528699)
 	- [ ] Dataview
 - [ ] Style Settings
 - [ ] Others
+	- [ ] Kanban Alt 
 	- [ ] PDF Export
 		- [ ] Themed
 		- [ ] Not Themed
@@ -57,12 +58,12 @@ Gif from [tk470](https://tenor.com/view/astronaut-float-space-gif-11528699)
 		- [ ] Bubble
 		- [ ] Space
 	- [ ] Active Note
-  - [ ] Print Layout
-    - [ ] Themed
-    - [ ] Cleared of Formatting
-  - [ ] Slides
-    - [ ] Bubble Theme
-    - [ ] Space Theme
-  - [ ] Custom Homepage
-    - [ ] Bubble
-    - [ ] Space
+  	- [ ] Print Layout
+	    - [ ] Themed
+	    - [ ] Cleared of Formatting
+	- [ ] Slides
+		- [ ] Bubble Theme
+		- [ ] Space Theme
+	- [ ] Custom Homepage
+		- [ ] Bubble
+		- [ ] Space
