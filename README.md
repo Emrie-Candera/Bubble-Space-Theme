@@ -3,7 +3,7 @@
 	- [🔵 Bubble Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-bubbles-light-mode)
 	- [🌌 Space Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-space-dark-mode)
 - [Extra: Space Animation](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-extra-space-animation)
-- [Roadmap](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#roadmap)
+- [Roadmap](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-roadmap)
 
 ---
 
