@@ -1,9 +1,13 @@
 # ✨Bubble-Space-Theme
+
 - [About](https://github.com/Emrie-Candera/Bubble-Space-Theme#about)
 	- [🔵 Bubble Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-bubbles-light-mode)
 	- [🌌 Space Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-space-dark-mode)
 - [Extra: Space Animation](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-extra-space-animation)
 - [Roadmap](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-roadmap)
+
+<img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/336ce1392ba191f3f28f69b6ae47f86c50ece000/screenshot.png"></img>
+
 
 ---
 
