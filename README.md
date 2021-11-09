@@ -4,7 +4,10 @@
 	- [🔵 Bubble Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-bubbles-light-mode)
 	- [🌌 Space Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-space-dark-mode)
 - [Extra: Space Animation](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-extra-space-animation)
-- [Roadmap](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-roadmap)
+- [Up Next](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-up-next)
+- [Releases](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-releases)
+
+### ❗❗ Don't forget to check out the [wiki](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki) as well!
 
 <img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/336ce1392ba191f3f28f69b6ae47f86c50ece000/screenshot.png"></img>
 
@@ -32,42 +35,9 @@ Gif from [tk470](https://tenor.com/view/astronaut-float-space-gif-11528699)
 
 ---
 
-## 🚀 Roadmap
-- [ ] Documentation
-	- [ ] Wiki
-		- [ ] Common Features
-		- [ ] Bubble Features
-		- [ ] Space Features
-	- [ ] ReadMe
-- [ ] Cleanup	
-	- [ ] Bubble Theme
-	- [ ] Space Theme
-- [ ] Optimize for Mobile
-- [ ] Plugins
-	- [ ] Kanban
-	- [ ] Sliding Panes
-	- [ ] Calendar
-	- [ ] Folder Note
-	- [ ] Metatable
-	- [ ] Checklist
-	- [ ] Outliner
-	- [ ] Dataview
-- [ ] Style Settings
-- [ ] Others
-	- [ ] Kanban Alt 
-	- [ ] PDF Export
-		- [ ] Themed
-		- [ ] Not Themed
-	- [ ] Loading Page
-		- [ ] Bubble
-		- [ ] Space
-	- [ ] Active Note
-  	- [ ] Print Layout
-	    - [ ] Themed
-	    - [ ] Cleared of Formatting
-	- [ ] Slides
-		- [ ] Bubble Theme
-		- [ ] Space Theme
-	- [ ] Custom Homepage
-		- [ ] Bubble
-		- [ ] Space
+## 🚀 Up Next: 
+- [ ] Style Settings Support
+- [ ] Print Styling
+
+## 🚀 Releases
+* ⭐ [v.0.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v0.1.1)- November 9, 2021
