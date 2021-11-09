@@ -25,19 +25,49 @@ COMMON CSS SNIPPETS (FOR BOTH LIGHT AND DARK)
 
 	COMMON B- Additional Snippets
 	    COMMON B1- Pub-image Flags from @Lithou (coming soon)
-		B1.1 Sizes
-		B1.2 Position
-		B1.3 Appearance
+            B1.1 Position
+                B1.1.1 Side
+                B1.1.2 Right
+                B1.1.3 Left
+                B1.1.4 Fixed
+                B1.1.5 Absolute
+                B1.1.6 Grid
+            B1.2 Size
+                B1.2.1 Thumbnail
+                B1.2.2 Small
+                B1.2.3 Medium 
+                B1.2.4 Large
+                B1.2.5 Huge
+                B1.2.6 Column Width
+            B1.3 Shapes and Orientation
+                B1.3.1 Portrait
+                B1.3.2 Landscape
+                B1.3.3 Banner
+                B1.3.4 HR
+            B1.4 Styles
+                B1.4.1 Tape
+                B1.4.2 PushPin
+                B1.4.3 Borders
+                B1.4.4 Shadows
+            B1.5 Other Effects 
+                B1.5.1 Zoom on Hover (optional)
+
 	    COMMON B2- 8+8 highlights from @steve_yang331 and a nifty hover highlight from discord
-		B2.1 WYSIWYG for Highlights
-		B2.2 Edit/Preview Highight Assignment
+            B2.1 WYSIWYG for Highlights
+            B2.2 Edit/Preview Highight Assignment
+
 	    COMMON B3- Kanban-alt from @Manedblackwolf
+
+        COMMON B4- Progress Bars from @SkepticMystic
 
 	COMMON C- PDF Export
 
 	COMMON D- Style Settings (Coming Soon)
 
-	COMMON E- Plugins (Coming Soon)
+	COMMON E- Plugins
+        COMMON E1- Admonition
+        COMMON E2- Word Sprint
+        COMMON E3- Icon Folder
 
 BUBBLE (LIGHT THEME) ONLY SNIPPETS
 	BUBBLE A- Layout
@@ -56,6 +86,7 @@ BUBBLE (LIGHT THEME) ONLY SNIPPETS
 		-           - Iterative rainbow Folder Color css by @pbhopeful (https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066)
 			A1.1.3 Header Image
 		    A1.2 Workspace Pane
+        BUBBLE A2- Graph
 	BUBBLE B- Markdown Formatting
 		BUBBLE B1 Text Formatting
 		    B1.1 Normal Text
@@ -110,6 +141,8 @@ SPACE (Dark Theme) Only Snippets
 		-           - Iterative rainbow Folder Color css by @pbhopeful (https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066)
 			A1.1.3 Header Image
 		    A1.2 Workspace Pane
+        SPACE A2- Graph
+
 	SPACE B- Markdown Formatting
 		SPACE B1 Text Formatting
 		    B1.1 Normal Text
@@ -191,6 +224,7 @@ SPACE (Dark Theme) Only Snippets
 
         --gold1: rgb(141, 108, 15);
         --gold2: rgb(167, 123, 29);
+        --gold3: rgb(184, 121, 28);
         }
     
     /*COMMON A1.2 Theme Colors*/
@@ -560,7 +594,7 @@ SPACE (Dark Theme) Only Snippets
     padding-bottom: 10px;
     }
 
-    /*COMMON A3.2- Line Width*/
+    /*COMMON A3.2- Readable Line Width*/
     .markdown-source-view.is-readable-line-width .CodeMirror, 
     .markdown-preview-view.markdown-source-view.is-readable-line-width {
         max-width   : 800px;
@@ -570,10 +604,7 @@ SPACE (Dark Theme) Only Snippets
 
 
 /*COMMON B- Additional Snippets
-    COMMON B1- Pub-image Flags from @Lithou
-        B1.1 Sizes
-        B1.2 Position
-        B1.3 Appearance
+    COMMON B1- Pub-image Flags from @Lithou (coming soon)
     COMMON B2- 8+8 highlights from @steve_yang331 and Highlight by pseudometa
         B2.1 WYSIWYG for Highlights
         B2.2 Edit/Preview Highight Assignment
@@ -586,9 +617,229 @@ Source: https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image
 
 How to use: CHeck documentation here https://github.com/Lithou/Sandbox/tree/main/Snippet%20Documentation%20and%20Examples
 */
+    span.image-embed, img{
+        --coremarg: 1%; 
+        --extramarg: 1%; /* This margin is used for any added margin between items */
+        --defaultwidth: 40%; /*This is the default width for core flags such as the "side" and "tape" */
+        --minwidth: 50px; /* This specifies the minimum width that %based width images will go to*/
+        --defaultzoomwidth: 100%; /* this specifies the default width when an image is zoomed in (usually set active which is clicking with mouse) */
+        --defaultscale: 1.5; /* this specifies the default ratio that an image is zoomed in (usually set to hover) */
+    }
+
+    /*COMMON B1.1 Position*/
+        /*COMMON B1.1.1 Side*/
+        img[alt*="side"]{
+            width: var(--defaultwidth);
+            min-width: var(--minwidth);
+            float: right;
+            margin: 0px;
+            margin-left: var(--coremarg);
+        }
+
+        /*COMMON B1.1.2 Right*/
+        img[alt*="right"]{
+            float: right !important;
+            margin: 0px;
+            margin-left: var(--extramarg);}
+
+        /*COMMON B1.1.3 Left*/
+        img[alt*="left"]{
+            float: left !important;
+            margin: 0px;
+            margin-right: var(--extramarg);}
+
+        /*COMMON B1.1.4 Fixed*/
+        span[alt*="-fix"]{position: fixed;}
+
+        /*COMMON B1.1.5 Absolute*/
+        span[alt*="-abs"]{position: absolute;}
+
+        /*COMMON B1.1.6 Grid*/
+        span[alt*="grid"]{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3px;
+        }
+        
+        img[alt*="grid"]{
+            max-height: 30vh;
+        }
+        
+        img[alt*="grid"]:hover{
+            transform: scale(1.5);
+        }
+
+    /*COMMON B1.2 Size*/
+        /*COMMON B1.2.1 Thumbnail*/
+        img[alt*="thumb"]{width: 12% !important;}
+
+        /*COMMON B1.2.2 Small*/
+        img[alt*="sm"]{width: 20%;}
+
+        /*COMMON B1.2.3 Medium*/
+        img[alt*="med"]{width: 25%;}
+
+        /*COMMON B1.2.4 Large*/
+        img[alt*="lg"]{width: 50%;}
+
+        /*COMMON B1.2.5 Huge*/
+        img[alt*="huge"]{width: 67%;}
+        
+        /*COMMON B1.2.6 Column Width*/
+        img[alt*="cwidth"]{float: none;margin-left: 0%;width: 120%;}
+
+        
+
+    /*COMMON B1.3 Shapes and Orientation*/
+        /*COMMON B1.3.1 Portrait*/
+        span[alt*="portrait"]{
+            float: left;
+            position: relative;
+            width: 30%;
+            vertical-align: top;
+            border: solid 5px;
+            clip-path: ellipse(40% 49% at 50% 50%);
+            }
+
+        img[alt*="portrait"]{
+            clip-path: ellipse(40% 49% at 50% 50%);
+            vertical-align: top;
+            }
+
+        /*COMMON B1.3.2 Landscape*/
+        span[alt*="landscape"]{
+            position: relative;
+            width: var(--defaultwidth);
+            min-width: var(--minwidth);
+            float: left;
+            border: solid 3px;
+            background-color:black; /* This setting will create a border effect of set color */
+            clip-path: ellipse(46% 36% at 50% 50%);
+            }
+        img[alt*="landscape"]{
+            vertical-align: top;
+            clip-path: ellipse(45% 35% at 50% 50%);
+        }
+
+        /*COMMON B1.3.3 Banner*/
+        span[alt*="banner"]{
+            display: block;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        span[alt*="banner"]>img{
+                margin-top: -150px;
+                width: 100%;
+            }
+
+        /*COMMON B1.3.4 HR*/
+        span[alt*="hr"]{
+            display: block;
+            height: 8px;
+            overflow: hidden;
+            border-radius: 4px;
+
+        }
+        span[alt*="hr"]>img{
+            margin-top: -200px;
+            width: 100%;
+            }
+
+    /*B1.4 Styles*/
+        /*B1.4.1 Tape*/
+        span[alt*="+tape"]{
+            position: relative;
+            float: right;
+            width: var(--defaultwidth);
+            min-width: var(--minwidth);
+            margin: auto;
+            margin-left: var(--coremarg);
+            transform: rotate(2deg);
+            }
 
 
+        span[alt*="+tape"]::before {
+            content: "";
+            position: absolute;
+            margin: auto;
+            width: 30%;
+            height: 14%;
+            top: -7%;
+            left: 35%;
+            background: rgba(255, 234, 118, 0.377); /*here you can chosse the scotch tape background*/
+            clip-path: polygon(50% 0%, 100% 0%, 
+            98% 10%, 100% 20%, 98% 30%, 100% 40%, 98% 50%, 100% 60%, 98% 70%, 100% 80%, 98% 90%,100% 100%,
+            0% 100%, 2% 90%, 0% 80%, 2% 70%, 0% 60%, 2% 50%, 0% 40%, 2% 30%, 0% 20%, 2% 10%, 0% 0%);  
+            }
 
+        /*B1.4.2 Pushpin*/
+        span[alt*="+pin"] {
+            position: relative;
+            float: right;
+            width: var(--defaultwidth);
+            min-width: var(--minwidth);
+            margin: auto;
+            margin-left: var(--coremarg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(2deg);}
+        span[alt*="+pin"]::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #4588cc;
+            top: -3%;
+            left: 50%;
+            border: solid #336699 8px;
+            border-radius: 50%;
+            box-shadow: #274d74 -5px 3px 1px;}
+
+        /*B1.4.3 Borders*/
+        img[alt*="-blborder"]{border: solid black 3px;}
+        img[alt*="-whborder"]{border: solid white 3px;}
+        img[alt*="-bradius1"]{border-radius: 10px;}
+        img[alt*="-bradius2"]{border-radius: 20px;}
+        img[alt*="-bradiustl"]{border-top-left-radius: 20px;}
+        img[alt*="-bradiusbr"]{border-bottom-right-radius: 20px;}
+        img[alt*="-bradiustr"]{border-top-right-radius: 20px;}
+        img[alt*="-bradiusbl"]{border-bottom-left-radius: 20px;}
+        img[alt*="-bthick"]{border-width: 5px;}
+        img[alt*="-bthin"]{border-width: 1px;}
+
+        /*B1.4.4 Shadows*/
+        img[alt*="-shadow"]{
+            -webkit-box-shadow: 5px 5px 15px -4px #6e4f9b; 
+            box-shadow: 5px 5px 15px -4px #5e4680;
+        }
+
+
+        img[alt*="-glow"]{
+            -webkit-box-shadow: -1px 0px 15px 1px #65f7ff8f; 
+            box-shadow: -1px 0px 15px 1px #65f7ff8e;
+        }
+
+        span[alt*="-nofloat"]{
+            display: inline-block;
+            float: unset;
+        }
+
+    /*COMMON B1.5 Other Effects*/
+        /*COMMON B1.5.1 Zoom on Hover*//*
+        img[alt*="+side"]:not(:active):hover,
+        span[alt*="+portrait"]:not(:active):hover,
+        span[alt*="+landscape"]:not(:active):hover{
+        transform: scale(1.5);
+        }
+
+        /* zoom and reverse rotate on hover *//*
+        img[alt*="+tape"]:not(:active):hover,
+        img[alt*="+pin"]:not(:active):hover{
+            transform: scale(1.5) rotate(-2deg);
+        }
 
 
 /*COMMON B2- 8+8 highlights
@@ -649,19 +900,39 @@ a[href^="#h/"] + mark {
 
 /* COMMON B2.2 Highlight Colors Editor mode  */
 
-/* -- white --  */
-.cm-tag-hwhite ~ span.cm-highlight {
-	background-color: var(--hlwhite) !important;
-    color: black !important;
+/* -- white highlight --  */
+.cm-tag-hwhite ~ span.cm-highlight{
+    background-color: transparent !important;
+    background-image: linear-gradient(120deg, var(--hlwhite), var(--hlwhite)) !important;
+    background-position: 0 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 3px !important;
+    transition: background 400ms ease !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
+.cm-tag-hwhite ~ span.cm-highlight:hover{
+    background-size: 100% 100% !important;
+    color: black;
 }
 
 a[href^="#h/white"] + mark {
-	background-color: var(--hlwhite) !important;
-    color: black !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(120deg, var(--hlwhite), var(--hlwhite)) !important;
+    background-position: 0 100% !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 3px !important;
+    transition: background 400ms ease !important;
+}
+
+a[href^="#h/white"] + mark:hover {
+    background-size: 100% 100% !important;
+    color:black !important;
 }
 
 
-/* -- black --  */
+/* -- black highlight --  */
 
 .cm-tag-hblack ~ span.cm-highlight{
     background-color: transparent !important;
@@ -694,7 +965,7 @@ a[href^="#h/black"] + mark:hover {
 }
 
 
-/* -- red --  */
+/* -- red highlight --  */
 
 .cm-tag-hred ~ span.cm-highlight{
     background-color: transparent !important;
@@ -724,7 +995,7 @@ a[href^="#h/red"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* -- pink --  */
+/* -- pink highlight --  */
 
 .cm-tag-hpink ~ span.cm-highlight{
     background-color: transparent !important;
@@ -754,7 +1025,7 @@ a[href^="#h/pink"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* -- orange --  */
+/* -- orange highlight --  */
 
 .cm-tag-horange ~ span.cm-highlight{
     background-color: transparent !important;
@@ -784,7 +1055,7 @@ a[href^="#h/orange"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* -- gold --  */
+/* -- gold highlight --  */
 
 .cm-tag-hgold ~ span.cm-highlight{
     background-color: transparent !important;
@@ -814,7 +1085,7 @@ a[href^="#h/gold"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* -- yellow --  */
+/* -- yellow highlight --  */
 
 .cm-tag-hyellow ~ span.cm-highlight{
     background-color: transparent !important;
@@ -829,6 +1100,7 @@ a[href^="#h/gold"] + mark:hover {
 
 .cm-tag-hyellow ~ span.cm-highlight:hover{
     background-size: 100% 100% !important;
+    color: black;
 }
 
 a[href^="#h/yellow"] + mark {
@@ -842,9 +1114,10 @@ a[href^="#h/yellow"] + mark {
 
 a[href^="#h/yellow"] + mark:hover {
     background-size: 100% 100% !important;
+    color: black;
 }
 
-/* -- lime --  */
+/* -- lime highlight --  */
 
 .cm-tag-hlime ~ span.cm-highlight{
     background-color: transparent !important;
@@ -859,6 +1132,7 @@ a[href^="#h/yellow"] + mark:hover {
 
 .cm-tag-hlime ~ span.cm-highlight:hover{
     background-size: 100% 100% !important;
+    color: black;
 }
 
 a[href^="#h/lime"] + mark {
@@ -872,9 +1146,10 @@ a[href^="#h/lime"] + mark {
 
 a[href^="#h/lime"] + mark:hover {
     background-size: 100% 100% !important;
+    color: black;
 }
 
-/* -- green --  */
+/* -- green highlight --  */
 
 .cm-tag-hgreen ~ span.cm-highlight{
     background-color: transparent !important;
@@ -904,7 +1179,7 @@ a[href^="#h/green"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* -- sky --  */
+/* -- sky highlight --  */
 
 .cm-tag-hsky ~ span.cm-highlight{
     background-color: transparent !important;
@@ -936,7 +1211,7 @@ a[href^="#h/sky"] + mark:hover {
     color: black
 }
 
-/* -- blue --  */
+/* -- blue highlight --  */
 
 .cm-tag-hblue ~ span.cm-highlight{
     background-color: transparent !important;
@@ -966,7 +1241,7 @@ a[href^="#h/blue"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* -- purple --  */
+/* -- purple highlight --  */
 
 .cm-tag-hpurple ~ span.cm-highlight{
     background-color: transparent !important;
@@ -996,7 +1271,7 @@ a[href^="#h/purple"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* -- gray --  */
+/* -- gray highlight --  */
 
 .cm-tag-hgray ~ span.cm-highlight{
     background-color: transparent !important;
@@ -1029,7 +1304,7 @@ a[href^="#h/gray"] + mark:hover {
 }
 
 
-/* -- brown --  */
+/* -- brown highlight --  */
 
 .cm-tag-hbrown ~ span.cm-highlight{
     background-color: transparent !important;
@@ -1059,14 +1334,14 @@ a[href^="#h/brown"] + mark:hover {
     background-size: 100% 100% !important;
 }
 
-/* COMMON B3- WYSIWYG Editor modef for highlight colors */
+/* COMMON B3- Kanban- Alt */
 
-/*kanban-alt*/
+/*common*/
 .kanban ul {
     display: flex;
     flex-direction: row;
-    border: 1px solid var(--background-primary) !important;
-    background-color: var(--background-primary);
+    border: 1px solid transparent !important;
+    background-color: var(--background-secondary) !important;
     padding: 1rem;
     border-radius: 1rem;
     flex-wrap: wrap;
@@ -1094,17 +1369,9 @@ a[href^="#h/brown"] + mark:hover {
     display: block;
     background: var(--secondary-background);
     margin-bottom: 5px;
-    padding: 10px;
-    border: 1px solid rgba(104, 103, 103, 0.644);
+    padding: 5px;
+    border: 0.2px solid rgb(19, 19, 19);
     border-radius: 5px;
-  }
-  
-  .kanban ul ul li:nth-child(even) {
-    background: var(--background-primary);
-  }
-  
-  .kanban ul ul li:hover {
-    background: #afafaf10;
   }
   
   .kanban ul ul li .task-list-item-checkbox {
@@ -1118,12 +1385,29 @@ a[href^="#h/brown"] + mark:hover {
   .kanban ul ul::before {
     border-left: 0;
   }
-  
+
   .markdown-preview-view.is-readable-line-width.kanban
   .markdown-preview-sizer
   > div
   > ul {
     max-width: 100%;
+  }
+
+  /*BUBBLE (Light) Kanban-alt*/
+
+  /*alternate colors*/
+  .theme-light .kanban ul ul li:nth-child(even) {
+    background: var(--lgrad2);
+  }
+  
+  .theme-light .kanban ul ul li:nth-child(odd) {
+    background: var(--lgrad3);
+  }
+
+
+  .theme-light .kanban .cm-hmd-list-indent .cm-tab::before, 
+  .theme-light .kanban ul ul::before {
+  border-left: 1px solid transparent !important;
   }
   
   .theme-light .kanban ul {
@@ -1131,8 +1415,120 @@ a[href^="#h/brown"] + mark:hover {
   }
   
   .theme-light .kanban ul li ul li:hover {
-    background: var(--background-primary);
+    background: var(--lgrad5); }
+  
+  /*SPACE (Dark) Kanban-alt*/
+  .theme-dark .kanban ul ul li:nth-child(even) {
+    background: rgba(255, 0, 234, 0.226);
   }
+  
+  .theme-dark .kanban ul ul li:nth-child(odd) {
+    background: rgba(150, 87, 231, 0.226);
+  }
+
+
+  .theme-dark .kanban .cm-hmd-list-indent .cm-tab::before, 
+  .theme-dark .kanban ul ul::before {
+  border-left: 1px solid transparent !important;
+  }
+  
+  .theme-dark .kanban ul {
+    background-color: var(--background-primary);
+  }
+  
+  .theme-dark .kanban ul li ul li:hover {
+    background: var(--grad1); }
+
+
+/* COMMON B4- Progress Bars*/    
+progress {
+    background: none;
+    height: 8px;
+}
+
+/*SPACE(DARK) MODE*/
+.theme-dark progress::-webkit-progress-value {
+    border-radius: 20px;
+}
+
+.theme-dark progress[value^="1"]::-webkit-progress-value {
+background: rgb(104, 10, 80);
+}
+.theme-dark progress[value^="2"]::-webkit-progress-value {
+background: rgb(88, 8, 88);
+}
+.theme-dark progress[value^="3"]::-webkit-progress-value {
+background: rgb(124, 25, 128);
+}
+.theme-dark progress[value^="4"]::-webkit-progress-value {
+background: rgb(170, 34, 204);
+}
+.theme-dark progress[value^="5"]::-webkit-progress-value {
+background: rgb(231, 121, 241);
+}
+.theme-dark progress[value^="6"]::-webkit-progress-value {
+background: rgb(29, 165, 206);
+}
+.theme-dark progress[value^="7"]::-webkit-progress-value {
+background: rgb(18, 123, 155);
+}
+.theme-dark progress[value^="8"]::-webkit-progress-value {
+background: rgb(56, 66, 199);
+}
+.theme-dark progress[value^="9"]::-webkit-progress-value {
+background: rgb(20, 55, 211);
+}
+.theme-dark progress[value^="10"]::-webkit-progress-value {
+background: rgb(123, 22, 206);
+}
+
+.theme-dark progress::-webkit-progress-bar {
+    background: var(--text-normal);
+    border-radius: 20px;
+}
+
+
+/*BUBBLE (LIGHT) MODE*/
+.theme-light progress::-webkit-progress-value {
+    border-radius: 20px;
+}
+
+.theme-light progress[value^="1"]::-webkit-progress-value {
+background: #73E8FF;
+}
+.theme-light progress[value^="2"]::-webkit-progress-value {
+background: #6DDEFC;
+}
+.theme-light progress[value^="3"]::-webkit-progress-value {
+background: #66D5F9;
+}
+.theme-light progress[value^="4"]::-webkit-progress-value {
+background: #60CBF6;
+}
+.theme-light progress[value^="5"]::-webkit-progress-value {
+background: #5AC2F3;
+}
+.theme-light progress[value^="6"]::-webkit-progress-value {
+background: #53B8F1;
+}
+.theme-light progress[value^="7"]::-webkit-progress-value {
+background: #4DAFEE;
+}
+.theme-light progress[value^="8"]::-webkit-progress-value {
+background: #47A5EB;
+}
+.theme-light progress[value^="9"]::-webkit-progress-value {
+background: #409CE8;
+}
+.theme-light progress[value^="10"]::-webkit-progress-value {
+background: #3A92E5;
+}
+
+.theme-light progress::-webkit-progress-bar {
+    background: rgba(214, 211, 209, 0.616);
+    border-radius: 20px;
+}
+
 
   /*COMMON C- PDF Export*/
   @media print {
@@ -1197,6 +1593,171 @@ a[href^="#h/brown"] + mark:hover {
     }
     }
 
+/*COMMON D- Style Settings*/
+
+
+
+
+/*COMMON E- Plugins*/
+/*COMMON E1- Admonition*/
+
+  
+.theme-dark .admonition-title-icon {
+    color: var(--gold3) !important;
+  }
+  
+  .theme-dark .admonition {
+    border-left-color: var(--gold3) !important;
+  }
+
+  .theme-dark details.admonition.admonition-note >summary,
+  .theme-dark details.admonition.admonition-abstract >summary,
+  .theme-dark details.admonition.admonition-info >summary {
+    background: rgb(91,25,164);
+    background: linear-gradient(90deg, rgba(91,25,164,0.6563137783093399) 11%, rgba(133,96,241,0.7096845648261938) 34%, rgba(239,105,217,0.4063137783093399) 58%, rgba(162,85,237,0.1787856884216994) 79%);}
+
+.theme-dark details.admonition.admonition-example >summary,
+.theme-dark details.admonition.admonition-quote >summary{
+    background: rgb(45,85,194);
+    background: linear-gradient(90deg, rgba(18, 59, 173, 0.849) 25%, rgba(59, 157, 223, 0.719) 46%, rgba(33,201,197,0.5467632165115871) 64%, rgba(13,68,135,0.8697969243767556) 86%);}
+    
+.theme-dark details.admonition.admonition-question >summary,
+.theme-dark details.admonition.admonition-success >summary {
+    background: rgb(20,135,85);
+background: linear-gradient(90deg, rgb(17, 82, 11) 25%, rgba(88, 163, 34, 0.938) 46%, rgba(156, 201, 33, 0.63) 64%, rgba(30, 131, 17, 0.87) 86%);
+}
+
+.theme-dark details.admonition.admonition-bug >summary,
+.theme-dark details.admonition.admonition-failure >summary,
+.theme-dark details.admonition.admonition-danger >summary {
+    background: rgb(135,20,89);
+background: linear-gradient(90deg, rgb(95, 8, 60) 25%, rgb(156, 23, 79) 46%, rgb(178, 36, 190) 64%, rgba(134, 4, 54, 0.87) 86%);
+}
+
+.theme-dark details.admonition.admonition-warning >summary,
+.theme-dark details.admonition.admonition-tip >summary {
+    background: rgb(181,118,11);
+    background: linear-gradient(90deg, rgb(122, 44, 12) 25%, rgba(207,103,20,1) 46%, rgb(230, 145, 124) 64%, rgba(194,95,15,0.8697969243767556) 86%);
+}
+
+
+/*COMMON E2- Word Sprint*/
+    /*Dark Mode*/
+        .theme-light #wordsprint #sprintActionPanel .sprintStart {
+        background-color: var(--gold1) !important;
+        color: white;
+        }
+
+        .theme-light #wordsprint #sprintActionPanel .sprintStop {
+        background-color: var(--purple4) !important;
+        color: white;
+        }
+
+        .theme-light #wordsprint .status {
+        background-color: transparent !important;
+        color: gray !important;
+        font-family: var(--font-space-header);
+        font-size: 24px;
+        }
+
+        .theme-light #wordsprint .hand{
+        color: var(--gold3);
+        font-family: var(--font-space-header);
+        }
+
+        .theme-light #wordsprint #sectionTab .active {
+        background-color: rgba(19, 71, 150, 0.438) !important;
+        color: white !important;
+        font-family: var(--font-code-like);
+        font-size: 16px;
+        padding: 2px;
+        }
+
+        .theme-light #wordsprint #sectionTab button:not(.active):not(:hover) {
+        background-color: var(--pink2) !important;
+        color: white !important;
+        font-family: var(--font-code-like);
+        font-size: 16px;
+        padding: 2px;
+        }
+
+        .theme-light #wordsprint #sprintViewStats .viewStats {
+        margin-top: 20px;
+        background-color: rgb(104, 27, 65) !important;
+        color: var(--text-on-accent);
+        }
+
+    /*Light Mode*/
+        .theme-light #wordsprint #sprintActionPanel .sprintStart {
+        background-color: rgb(17, 155, 148) !important;
+        color: white;
+        }
+
+        .theme-light #wordsprint #sprintActionPanel .sprintStop {
+        background-color: purple !important;
+        color: white;
+        }
+
+        .theme-light #wordsprint .status {
+        background-color: transparent !important;
+        color: rgb(26, 122, 167) !important;
+        font-family: var(--font-bubble-header);
+        font-size: 24px;
+        }
+
+        .theme-light #wordsprint .hand{
+        color: rgb(0, 0, 0);
+        font-family: var(--font-bubble-header);
+        }
+
+        .theme-light #wordsprint #sectionTab .active {
+        background-color: rgba(139, 35, 224, 0.459) !important;
+        color: white !important;
+        font-family: var(--font-code-like);
+        font-size: 16px;
+        padding: 2px;
+        }
+
+        .theme-light #wordsprint #sectionTab button:not(.active):not(:hover) {
+        background-color: rgb(93, 206, 226) !important;
+        color: white !important;
+        font-family: var(--font-code-like);
+        font-size: 16px;
+        padding: 2px;
+        }
+
+        .theme-light #wordsprint #sprintViewStats .viewStats {
+        margin-top: 20px;
+        background-color: rgb(170, 183, 243) !important;
+        color: var(--text-on-accent);
+        }
+
+   /* COMMON E3- Icon Folder*/
+
+   /*SPACE (DARK) MODE*/
+    /*top level folder icon as white*/
+    .theme-dark .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title .obsidian-icon-folder-icon { 
+        color: white !important;}
+    
+        /*subfolder icons as gold*/
+    .theme-dark .obsidian-icon-folder-icon {
+        color: rgb(145, 94, 27);
+        margin-left: 4px !important;
+        }
+
+    /*BUBBLE (LIGHT) MODE*/
+        /*top level folder icon as white*/
+        .theme-light .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title .obsidian-icon-folder-icon { 
+        color: rgb(0, 0, 0) !important;}
+
+        /*subfolder icons as gold*/
+        .theme-light .obsidian-icon-folder-icon {
+        color: rgb(10, 110, 110);
+        margin-left: 4px !important;
+        }
+
+
+
 /*BUBBLE A- Layout
 BUBBLE A1- Panes
     A1.1 File Explorer
@@ -1213,6 +1774,7 @@ BUBBLE A1- Panes
 -           - Iterative rainbow Folder Color css by @pbhopeful (https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066)
         A1.1.3 Header Image
     A1.2 Workspace Pane
+BUBBLE A2- Graph
 */
 .titlebar {
     background-color: transparent;
@@ -1231,8 +1793,8 @@ BUBBLE A1- Panes
         cursor: default;
         font-family: var(--font-var-bubble-header);
         font-weight: 500;
-        padding-top: 10px;
-        padding-bottom: 5px;
+        padding-top: 15px;
+        padding-bottom: 2px;
         background: #B0B0B0;
         background: -webkit-linear-gradient(to top, #B0B0B0 0%, #40C6FF 100%);
         background: -moz-linear-gradient(to top, #B0B0B0 0%, #40C6FF 100%);
@@ -1250,10 +1812,11 @@ BUBBLE A1- Panes
         width: 300px; height: 100px !important;
         margin-top: -20px;
         margin-bottom: -30px;
-        margin-left: -15%;
+        margin-left: -10%;
     
         border-radius: none}
-    
+
+
         /*BUBBLE A1.1.3 Container Margins*/
         .theme-light .nav-files-container{
         margin-right: 5px;
@@ -1406,6 +1969,60 @@ BUBBLE A1- Panes
       background: linear-gradient(90deg, rgba(35, 205, 228, 0.63) 3%, rgba(132, 208, 243, 0.71) 8%, rgba(162,85,237,0) 38%);
       border-bottom: 2px solid rgba(41, 176, 185, 0.452);
     }
+
+/*BUBBLE A2- Graph Styling */
+
+.theme-light .graph-controls {
+    background-color: var(--lblue2);
+    opacity: 90%;
+    color: white;
+    }
+
+    .theme-light .graph-controls .setting-item-name {
+        color: black;
+    }
+
+    
+    .theme-light .graph-view.color-arrow {
+    color: #772dee;
+    }
+    
+    .theme-light .graph-view.color-fill-tag {
+        color: #a36aee;
+    }
+    
+    .theme-light .graph-view.color-fill-attachment {
+        color: #0c3181;
+    }
+    
+    .theme-light .graph-view.color-fill-unresolved {
+        color: #20beb7c2; 
+    }
+    
+    .theme-light .graph-view.color-fill {
+        color: rgb(17, 188, 231);
+    }
+    .theme-dark  .graph-view.color-circle {
+        color: var(--text-normal);
+    }
+    .theme-light .graph-view.color-line {
+        color: rgba(37, 133, 211, 0.452);
+    }
+    .theme-light .graph-view.color-text {
+        color: var(--text-normal);
+    }
+    .theme-light .graph-view.color-fill-highlight {
+        color: var(--lblue2);
+    }
+    .theme-light .graph-view.color-line-highlight {
+        color: var(--lblue4);
+    }
+    
+    .theme-light .graph-controls-button {
+        color: black;
+    }
+    
+
     /*BUBBLE B Markdown Formatting*/
 /*
 BUBBLE B1 Text Formatting
@@ -1879,6 +2496,9 @@ BUBBLE B5 Embeds
             position: relative;
             height: 20px !important;
             width: 20px !important;
+            left: -4px;
+            top: 7px;
+            margin-right: 3px;
             }
             
             .theme-light input[type=checkbox]:focus{
@@ -2105,7 +2725,7 @@ SPACE A1- Panes
 
   /*SPACE A1.1.1 Vault Name*/
   .theme-dark .nav-folder.mod-root > .nav-file-title, .theme-dark .nav-folder.mod-root > .nav-folder-title {
-    padding-left: 8%;
+    padding-left: 2%;
     height: fit-content;
     width: max-content;
     text-align: center !important;
@@ -2289,6 +2909,51 @@ SPACE A1- Panes
   background: linear-gradient(90deg, rgba(139, 12, 108, 0.63) 3%, rgba(84, 52, 179, 0.71) 8%, rgba(162,85,237,0) 38%);
   border-bottom: 2px solid rgba(101, 98, 102, 0.452);
 }
+
+
+/*SPACE A2- Graph*/
+/* to style the new nodes in the 0.9.1+ */
+
+.theme-dark .graph-controls {
+background-color: var(--background-primary);
+}
+
+.theme-dark  .graph-view.color-arrow {
+color: #c85cad;
+}
+
+.theme-dark .graph-view.color-fill-tag {
+    color: #18947f;
+}
+
+.theme-dark .graph-view.color-fill-attachment {
+    color: #083daf;
+}
+
+.theme-dark .graph-view.color-fill-unresolved {
+    color: #258afdc2; 
+}
+
+.theme-dark .graph-view.color-fill {
+    color: rgb(102, 30, 145);
+}
+.theme-dark  .graph-view.color-circle {
+    color: var(--text-normal);
+}
+.theme-dark .graph-view.color-line {
+    color: rgba(139, 155, 241, 0.452);
+}
+.theme-dark .graph-view.color-text {
+    color: var(--text-normal);
+}
+.theme-dark .graph-view.color-fill-highlight {
+    color: var(--gold3);
+}
+.theme-dark .graph-view.color-line-highlight {
+    color: var(--lblue3);
+}
+    
+
 
 /*SPACE B Markdown Formatting*/
 /*
@@ -2558,7 +3223,7 @@ SPACE B5 Embeds
             color: transparent;
             font-weight: unset;
             float: right;
-            position: relative;
+            position:relative;
             margin: .5em;
             margin-right: -1em;
             width: 1.5em;
@@ -2720,6 +3385,44 @@ SPACE B5 Embeds
             
     
         /*SPACE B2.3 Checklists*/
+        /*STAR*/
+            /*preview mode*/
+            .theme-dark .markdown-preview-view .task-list-item-checkbox {	
+                visibility:hidden !important;
+                margin-right: 8px;
+                font-size:30px;
+                cursor:pointer;
+                position:relative;
+                margin-top: -20px;
+                left: -10px;
+                }
+                
+                .theme-dark .markdown-preview-view .task-list-item-checkbox::before {
+                content: "\2606";
+                visibility:visible;
+                color: rgba(248, 69, 15, 0.733);
+                position: relative;
+                }
+                
+                .theme-dark .markdown-preview-view .task-list-item-checkbox:checked::before {
+                content: "\2605";
+                color: rgb(248, 81, 15);
+                position: relative;
+                text-shadow: 0px 2px 10px #e94e06d7;
+                }
+
+            /*edit mode*/
+            .theme-dark .cm-s-obsidian span.cm-formatting-task {
+            font-weight: 50;
+            color: rgba(206, 124, 238, 0.74) !important;
+            }
+                
+            .theme-dark .cm-s-obsidian span.cm-formatting-task.cm-property {
+            font-weight: 500 !important;
+            color: rgb(247, 165, 12) !important;
+            }
+
+        /*RED GLOW CIRCLE*/
             /*preview mode*/
             .theme-dark input[type=checkbox] {
             appearance: none;
