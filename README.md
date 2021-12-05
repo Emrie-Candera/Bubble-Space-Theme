@@ -37,7 +37,6 @@ Gif from [tk470](https://tenor.com/view/astronaut-float-space-gif-11528699)
 
 ## 🚀 Up Next: 
 - [ ] Style Settings Support
-- [ ] Print Styling
 
 ## 🚀 Releases
-* ⭐ [v.0.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v0.1.1)- November 9, 2021
+* ⭐ [v.0.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.1)- November 9, 2021
