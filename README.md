@@ -31,8 +31,9 @@ This theme is inspired by Bubbles for Light Mode and Outer Space for Dark Mode h
 ---
 
 ## 🚀 Up Next: 
-- [ ] PDF Export Styling
-- [ ] Style Settings 
+- PDF Export Styling
+- Style Settings 
 
 ## 🚀 Releases
-* ⭐ [v.0.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.1)- November 9, 2021
+* ⭐ [v.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.1)- November 9, 2021
+* ⭐[v1.2](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.2)- December 8, 2021
