@@ -3,7 +3,7 @@
 - [About](https://github.com/Emrie-Candera/Bubble-Space-Theme#about)
 	- [🔵 Bubble Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-bubbles-light-mode)
 	- [🌌 Space Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-space-dark-mode)
-- [Extra: Space Animation](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-extra-space-animation)
+- [Also Check Out](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-also-check-out)
 - [Up Next](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-up-next)
 - [Releases](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-releases)
 
@@ -23,20 +23,16 @@ This theme is inspired by Bubbles for Light Mode and Outer Space for Dark Mode h
 ### 🌌 Space (Dark Mode)
 ![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/2b98fd9c23bf9462a469df156c4f8b6af2252718/images/Space%20(Dark).png)
 
-## 🐱‍🚀 Extra: Space Animation
-You can download the [Space Animations.css](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/f6eef48929ff1fa168cf43940314c2a66bba39df/Space%20Animations.css) as a snippet. This will enable a motion background of stars. This actually comes from the [Christmas Theme](https://github.com/deathau/obsidian-christmas-theme)'s "snow" feature. When I tried it with my theme it looked like I was moving in space. 
-
-I added an astronaut in the demo because why not? 😅
-Gif from [tk470](https://tenor.com/view/astronaut-float-space-gif-11528699)
-
-⚠️ **IMPORTANT:** I don't recommend using this on mobile. This slows down mobile performance big time. 
-
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/2b98fd9c23bf9462a469df156c4f8b6af2252718/images/Astronaut%20Float.gif)
+## 🐱‍🚀 Also Check Out
+- [Mini Snippet Store](https://github.com/Emrie-Candera/Bubble-Space-Theme/tree/main/Mini%20Snippet%20Store)
+   - [Demos](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Mini-Snippet-Store-(Demos))
+- [Wiki](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki)
 
 ---
 
 ## 🚀 Up Next: 
-- [ ] Style Settings Support
+- [ ] PDF Export Styling
+- [ ] Style Settings 
 
 ## 🚀 Releases
 * ⭐ [v.0.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.1)- November 9, 2021
