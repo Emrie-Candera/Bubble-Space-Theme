@@ -3575,8 +3575,7 @@ color: #885215;
 }
 
 .theme-light .modal.mod-community-plugin input {
-    width: 200px;
-    margin-left: -20px;
+    width: 100%;
 }
 
 .theme-light .community-plugin-item .community-plugin-desc {
@@ -5509,8 +5508,7 @@ border-top-left-radius: 20px;
 }
 
 .theme-dark .modal.mod-community-plugin input {
-    width: 200px;
-    margin-left: -20px;
+    width: 100%;
 }
 
 .theme-dark .community-plugin-item .community-plugin-desc {
