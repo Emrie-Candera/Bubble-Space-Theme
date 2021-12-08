@@ -5357,6 +5357,10 @@ border-top-left-radius: 20px;
     padding: 0px;
 }
 
+.theme-dark .community-theme-mode-toggle-label {
+    color: var(--text-normal);
+}
+
 .theme-dark .modal-title {
     font-family: var(--font-var-space-header);
     color: gray;
