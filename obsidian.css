@@ -1872,6 +1872,7 @@ content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmH
   font-family: var(--font-bubble-header);
   color: var(--blue3);
   margin-top: -4px;
+background-color: none !important;
 }
 
 .theme-light .frontmatter-container:hover {
