@@ -1,12 +1,10 @@
-
-/* ─────────────── COMMON B4- Hover Frontmatter ────────────────── */
 /*COMMON B4.1 Light Mode (Bubble)*/
 
 /*COMMON B4.1.1 Metadata Container*/
 .theme-light .frontmatter-container {
   float: right;
   position: relative;
-  right: -30px;
+  right: -40px;
   width: 4.2em;
   height: 3.6em;
   overflow: hidden;
@@ -27,12 +25,15 @@ content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmH
   margin-top: -15px; /*🌟*/
 }
 
+
 .theme-light .frontmatter-container:hover>.frontmatter-container-header {
   font-size: 18px;
   font-family: var(--font-bubble-header);
   color: var(--blue3);
   margin-top: -4px;
+  background: none;
 }
+
 
 .theme-light .frontmatter-container:hover {
 margin-left: 20px;
@@ -45,7 +46,7 @@ padding: 0.6em;
 padding-top: 1.5em;
 z-index: 3;
 border: 2px rgb(92, 160, 199) solid !important;
-border-radius: 1.5em;}*/
+border-radius: 1.5em;}
 
 /*COMMON B4.1.2 Frontmatter Codeblock*/
 .theme-light pre.frontmatter {
@@ -90,7 +91,7 @@ border-radius: 1.5em;}*/
 }
 .theme-light pre.frontmatter:hover .code {
   visibility: visible;
-}*/
+}
 
 /*...............................................................*/
 
@@ -101,7 +102,7 @@ border-radius: 1.5em;}*/
   position: relative;
   width: 5em;
   height: 5em;
-  right: -50px;
+  right: -60px;
   top: -10px;
   overflow: hidden;
   border: none !important;
@@ -124,6 +125,7 @@ border-radius: 1.5em;}*/
   font-family: var(--font-space-header);
   color: var(--gold3);
   margin-top: -4px;
+  background: none !important;
 }
 
 .theme-dark .frontmatter-container:hover {
@@ -182,3 +184,4 @@ border-radius: 1.5em;}
 .theme-dark pre.frontmatter:hover .code {
   visibility: visible;
 }
+
