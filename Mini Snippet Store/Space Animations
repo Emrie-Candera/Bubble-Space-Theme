@@ -1,0 +1,45 @@
+/* Stars */
+body:before,
+body:after,
+html:before,
+html:after 
+{
+  content: "";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url(https://freepngimg.com/download/winter_snow/6-2-clear-snow-png.png);
+  opacity: 0.2;
+  animation: MOVE-BG 3000s linear infinite;
+  z-index: 100;
+  pointer-events: none;
+}
+body:after {
+  top: -3000%;
+}
+body:before {
+  top: -2500%;
+  filter: blur(2000px);
+  background-size: 75%;
+}
+html:after {
+  filter: blur(2000px);
+  top: -2000%;
+  background-size: 50%;
+}
+
+html:before {
+  filter: blur(2000px);
+  top: -1500%;
+  background-size: 25%;
+}
+
+ @keyframes MOVE-BG {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
