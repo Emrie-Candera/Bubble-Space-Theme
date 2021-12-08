@@ -6399,3 +6399,6 @@ background: rgb(123, 22, 206);
 /*SPACE B3.4 Mermaid*/
 
 /*no changes needed*/
+
+.theme-dark p {
+	color: var(--text-normal); }
