@@ -1,0 +1,635 @@
+/*Used Colors*/
+
+/*BXM 1: Basic Colors*/
+.theme-dark {
+    --background-primary: var(--dblue5);
+    --background-primary-alt: transparent;
+    --background-secondary:var(--dblue4);
+    --background-secondary-alt:var(--dblue5);
+    --background-modifier-border: rgba(8, 24, 58, 0.452);
+
+    --text-accent: var(--teal1);
+    --text-accent-hover: var(--teal2);
+    --text-highlight-bg: var(--blue8);
+    --text-selection: var(--blue8);
+    --text-error: orange;
+
+    --interactive-accent: var(--blue2);
+    --interactive-hover: white;
+    --interactive-accent-hover: var(--blue2);
+    }
+
+/*BXM 2: Specific Panes*/
+    /*BXM 2.1 File Explorer*/
+
+        /*Header Image*/
+        .theme-dark .workspace-leaf-content[data-type="file-explorer"]
+        .nav-header::after {
+            content: "";
+            display: block;
+            background: center / contain no-repeat url("https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/theme%20image/Santa_Sleigh_1-removebg-preview.png?raw=true");
+            width: 230px; height: 130px;
+            margin-top: -25px;
+            margin-bottom: -40px;
+            margin-left: 0%;
+            border-radius: none}
+        
+        /*Vault Title*/
+        .theme-dark .nav-folder.mod-root > .nav-file-title, .theme-dark .nav-folder.mod-root > .nav-folder-title {
+            font-size: 26px;
+            font-family: var(--font-var-space-header);
+            font-weight: 500;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            background: #a2acec;
+            background: repeating-linear-gradient(to top, #dee0e9 0%, #966409 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /*Folder Colors*/
+        .theme-dark {
+            --grad1: rgb(20, 50, 95); 
+            --grad2: rgb(26, 56, 121);
+            --grad3: rgb(22, 60, 129);
+            --grad4: rgb(17, 57, 114);
+            --grad5: rgba(21, 43, 117, 0.836);
+            --grad6: rgba(16, 34, 92, 0.849);
+            --grad7: rgb(17, 19, 85);
+            --grad8: rgb(7, 23, 77);
+        }
+
+        /*Collapse Icon*/
+        .theme-dark .collapse-icon svg {
+            color: var(--gold6) !important;
+        }
+
+    /*BXM 2.2 Graph*/
+    .theme-dark .graph-view.color-fill {
+        color: rgb(117, 174, 184);
+    }
+
+    .theme-dark .graph-view.color-line {
+        color: var(--blue8);
+    }
+
+    .theme-dark .graph-view.color-fill-tag {
+        color: var(--gold1);
+    }
+
+    .theme-dark .graph-view.color-text {
+        color: var(--lblue3);
+    }
+
+    .theme-dark .graph-view.color-fill-unresolved {
+        color: var(--purple3);
+    }
+
+    /*BXM 2.3 Tag and Outline Pane*/
+        /*COUNTER*/
+        .theme-dark .tag-container .tree-item .tree-item-flair {
+            border: solid 1px rgb(32, 109, 139);
+            color: rgb(91, 172, 204);
+            background-color: var(--background-secondary);
+            padding: 4px;
+            padding-left: 6px;
+            padding-right: 6px;
+          }
+          
+        .theme-dark .tag-container .tree-item >.tree-item-children >.tree-item >.tree-item-children .tree-item .tree-item-flair {
+        border: solid 1px rgb(117, 115, 119);
+        color: rgb(142, 140, 145);
+        background-color: var(--background-secondary);
+        }
+        
+        .theme-dark .tag-container .tree-item  >.tree-item-children .tree-item .tree-item-flair {
+            border: solid 1px rgb(107, 67, 15);
+            background-color: var(--background-secondary);
+            color: rgb(230, 163, 77);
+        }
+
+        /*GRADIENT SNOWFLAKES*/
+        .theme-dark .tag-container .tree-item .tree-item-self .tree-item-inner::before {
+            color: rgb(32, 109, 139);
+        }
+
+        .theme-dark .tag-container .tree-item .tree-item-self .tree-item-inner {
+            color: rgb(32, 109, 139);
+            border-bottom: rgb(32, 109, 139) solid 1px;
+        }
+
+        .theme-dark .tag-container .tree-item .tree-item-self .tree-item-inner:hover,
+        .theme-dark .outline .tree-item .tree-item-self .tree-item-inner:hover {
+            text-shadow: 2px 3px 15px #3AB9CE;
+        }
+
+        .theme-dark .tag-container .collapse-icon svg,
+        .theme-dark .outline .collapse-icon svg {
+            color: var(--purple1) !important;
+        }
+
+        .theme-dark .tag-container .tree-item >.tree-item-children >.tree-item >.tree-item-children .tree-item-self .tree-item-inner::before{
+            content: "★" ;
+            color: rgb(117, 123, 126);
+            font-size: 15px;
+          }
+
+          .theme-dark .tag-container .tree-item >.tree-item-children >.tree-item >.tree-item-children .tree-item-self .tree-item-inner {
+            color: rgb(164, 169, 172);
+            border-bottom: none;
+          }
+
+          .theme-dark .tag-container .tree-item > .tree-item-children .tree-item-self .tree-item-inner::before {
+            color: var(--gold1);
+          }
+          
+          .theme-dark .tag-container .tree-item > .tree-item-children .tree-item-self .tree-item-inner {
+            color: rgb(187, 143, 76);
+            border-bottom: none;
+          }
+          
+/*BXM 2.3 Outline Pane*/
+.theme-dark .outline .tree-item .tree-item-self .tree-item-inner::before {
+    content: "❄";
+    font-size: 14px;
+  }
+
+    .theme-dark .outline .tree-item .tree-item-self .tree-item-inner::before {
+        color: rgb(32, 109, 139);
+    }
+
+    .theme-dark .outline .tree-item .tree-item-self .tree-item-inner {
+        color: rgb(80, 168, 202);
+        border-bottom: rgb(32, 109, 139) solid 1px;
+    }
+
+    
+    .theme-dark .outline .tree-item >.tree-item-children .tree-item-self .tree-item-inner {
+        color: white;
+        font-size: 1em;
+        border-bottom: transparent;
+        }
+
+    .theme-dark .outline .tree-item >.tree-item-children .tree-item-self .tree-item-inner::before{
+        content: "★";
+        color: var(--lblue5);
+    }
+
+    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before {
+        color: var(--blue3);
+    }
+
+    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before{
+    color: var(--blue5);
+    }
+
+    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before{
+    color: var(--blue6);
+    }
+
+    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children .tree-item-self.tree-item-inner::before {
+    color: var(--teal1);
+    }
+
+    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children.tree-item-self .tree-item-inner::before{
+    color: var(--blue8);
+    }
+
+/*BXM 3: Text Colors*/
+    /*Headers*/
+    .theme-dark {
+    --header1: rgb(38, 93, 175);
+    --header2: rgb(75, 132, 196);
+    --header3: rgb(84, 118, 163);
+    --header4: rgb(127, 149, 175);
+    --header5: rgb(136, 101, 35);
+    --header6: rgb(160, 147, 124);}
+
+    /*Bold*/
+    .theme-dark .cm-strong,
+    .theme-dark strong {
+        color: var(--gold2);
+    }
+
+    /*Inline Code*/
+    .theme-dark .cm-s-obsidian span.cm-inline-code, 
+    .theme-dark .markdown-preview-view code {
+    color: var(--cream2);
+    }
+
+    /*Comment*/
+    .theme-dark .cm-s-obsidian span.cm-comment {
+    color: var(--blue5);
+    font-weight: bold;
+    }
+
+/*BXM 4: Workspace Layout*/
+
+    /*Active Note*/
+    .theme-dark .workspace-leaf.mod-active .view-header {
+    background: rgb(35,104,195);
+    background: linear-gradient(90deg, rgba(23, 87, 206, 0.87) 3%, rgba(74, 113, 221, 0.808) 10%, rgba(155, 178, 241, 0.11) 58%);
+    border-bottom: 2px solid rgba(98, 99, 102, 0.452);
+        }
+
+    .theme-dark .workspace-leaf.mod-active .view-header-icon {
+        color: rgb(255, 255, 255);
+    }
+
+    /*Search Bar*/
+    .theme-dark .document-search-container {
+        background-color: var(--blue8);
+    }
+
+    .theme-dark .document-search-button {
+        background-color: var(--gray1);
+        color: black;
+    }
+
+    /*Frontmatter*/
+    .theme-dark .frontmatter-container-header {
+        background: rgb(35,104,195);
+        background: linear-gradient(90deg, rgba(23, 87, 206, 0.87) 3%, rgba(74, 113, 221, 0.808) 10%, rgba(155, 178, 241, 0.11) 58%);
+        border-bottom: 2px solid rgba(98, 99, 102, 0.452);
+        color: white;
+    }
+
+    /*Side Dock Ribbon*/
+    .theme-dark .workspace-ribbon.is-collapsed .side-dock-ribbon-action {
+        box-shadow: inset -4px -4px 4px -3px #4881ebd0;
+        border-top: #aac5d48a solid 1px;
+        border-left: #ecb00c85 solid 1px;
+    }
+
+/*BXM 6: Other Elements*/
+    /*Scrollbar*/
+    .theme-dark ::-webkit-scrollbar-thumb {
+        background: rgba(44, 183, 207, 0.692);
+        background: linear-gradient(351deg, rgba(47, 99, 158, 0.74) 29%, rgba(77, 138, 218, 0.795) 50%, rgba(78, 149, 237, 0.753) 70%, rgba(111, 183, 211, 0.808) 81%, rgba(35, 127, 233, 0.589) 92%);
+   }
+
+   .theme-dark .modal-content h2 {
+    color: var(--header5);
+    }
+
+    /*Button*/
+    .theme-dark button.mod-warning {
+        background-color: rgb(134, 85, 12);
+        color: white;
+    }
+
+    .theme-dark.theme-dark .modal button:not(.mod-cta):not(.mod-warning){
+        background-color: rgba(101, 170, 226, 0.712) !important;
+    }
+
+    .theme-dark .modal-title {
+        color: var(--gold1);
+    }
+
+   /*Slider*/
+   .theme-dark input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--blue1);
+   }
+
+   /*Toggle*/
+   .theme-dark .checkbox-container::after {
+    content: "❆";
+    background-color: transparent !important;
+    top: -4px;
+    left: -2px;
+    font-size: 25px;
+    transform: rotate(0deg);
+    }
+
+    .theme-dark .checkbox-container.is-enabled::after {
+        content: "❆";
+        color: black;
+        background-color: transparent !important;
+        top: 1px;
+        left: 16px;
+        font-size: 28px;
+        transform: rotate(340deg);
+    }
+
+    .theme-dark .checkbox-container.is-enabled {
+        background-color: var(--blue1);
+        background-image: none;
+        transform: none;
+    }
+
+    /*HR*/
+    .theme-dark div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
+        content: '🎄'; 
+        transform: translate(-50%, -50%) rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    .theme-dark .markdown-preview-view hr::after {
+        content: "🎄";
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: 50% 50%;}
+
+    /*Aside*/
+    .theme-dark aside:hover {
+        border: 1px solid var(--blue2) !important;
+        border-right: 4px solid var(--blue2) !important;
+        border-bottom: 4px solid var(--blue2) !important;
+    }
+
+    /*Tags Edit*/
+    .theme-dark .cm-s-obsidian span.cm-hashtag {
+        border-top: 1px solid rgb(70, 118, 145) ;
+        border-bottom: 1px solid rgb(70, 118, 145) ;
+    }
+
+    .theme-dark .cm-s-obsidian span.cm-hashtag::before {
+        content: '❄️';
+    }
+
+    /*Tags Preview*/
+    .theme-dark .tag {
+        background: rgba(103, 122, 219, 0.055);
+        background: radial-gradient(circle, rgba(63, 94, 251, 0.24) 0%, rgba(70, 128, 252, 0.205) 100%);
+        border: 1px solid rgb(63, 84, 139);
+        color: var(--lblue3);
+    }
+
+    .theme-dark .tag::before {
+        content: '❄';
+        padding-right: 3px;
+        color: rgb(235, 222, 189);
+        font-size: 15px;
+    }
+
+    /*Quote*/
+    .theme-dark .markdown-preview-view blockquote {
+        border-left: 0.2em solid rgba(21, 42, 110, 0.897);
+        border-top: 0.1em solid rgba(66, 83, 180, 0.747);
+        border-bottom: 0.2em solid rgba(37, 77, 163, 0.74);
+        border-right: 0.1em solid rgba(28, 58, 153, 0.637);
+        padding-top: 10px;
+        -webkit-box-shadow: 0px 2px 10px 0px #2f24ac59; 
+        box-shadow: 0px 2px 10px 0px #352aac49;
+        }
+
+        /*quotation mark*/
+        .theme-dark .markdown-preview-view blockquote:hover::before {
+            color: rgb(14, 78, 151);
+            content: "“";
+            background: whitesmoke;
+            box-shadow: 0 4px 5px -1px rgba(20, 65, 150, 0.808);
+             }
+
+        .theme-dark cite {
+            color: var(--blue7);
+        }
+
+        .theme-dark cite::before {
+            content: "❆ ";
+            color: whitesmoke;
+        }
+    
+        .theme-dark cite::after {
+            content: " ❆";
+            color: whitesmoke;
+        }
+
+    /*Table*/
+    .theme-dark table {
+        background-color: rgb(0, 153, 255);
+        border-radius: 10px;
+    }
+
+    .theme-dark table tr:nth-child(6n+2) {
+        background-color: rgb(59, 88, 219);
+    }
+
+    .theme-dark table tr:nth-child(6n+3) {
+        background-color: rgba(97, 75, 194, 0.644);
+    }
+
+    .theme-dark table tr:nth-child(6n+4) {
+        background-color: rgba(74, 106, 194, 0.849);
+    }
+
+    .theme-dark table tr:nth-child(6n+5) {
+        background-color: rgba(57, 78, 172, 0.548);
+    }
+
+    .theme-dark table tr:nth-child(6n) {
+        background-color: rgba(36, 38, 173, 0.479);
+    }
+
+    .theme-dark table tr:nth-child(6n+1) {
+        background-color: rgb(83, 120, 224);
+    }
+
+    .theme-dark table th {
+        background-color: var(--blue2);
+        border: 1px solid var(--blue2);
+    }
+
+    .theme-dark table th:hover {
+        background-color: var(--blue3);
+    }
+
+    /*Lists*/
+    .theme-dark span.cm-formatting-list-ul:after {
+        content: "❆ ";
+        color: var(--blue1);
+    }
+
+    /*Checklist Edit*/
+    .theme-dark .cm-s-obsidian span.cm-formatting-task {
+        font-weight: 50;
+        color: rgba(194, 198, 201, 0.74) !important;
+        }
+            
+        .theme-dark .cm-s-obsidian span.cm-formatting-task.cm-property{
+        font-weight: 500 !important;
+        color: rgb(192, 134, 25) !important;
+        }
+
+
+/*BXM 7: Pseudo Kanban*/
+    .theme-dark .kanban ul ul li:nth-child(even) {
+        background-color: var(--grad1);
+    }
+
+    .theme-dark .kanban ul  ul li:nth-child(odd) {
+        background-color: var(--grad2);
+    }
+
+/*BXM 8: Plugins*/
+    /*Calendar*/
+    .theme-dark .day.svelte-q3wqg9:hover {
+        box-shadow: 1px 0px 15px 1px var(--blue1);
+        border: var(--blue2) solid 2px !important;     }
+
+    .theme-dark th.svelte-pcimu8 {
+        color: white;
+    }
+
+    /*Fantasy Calendar*/
+    .theme-dark .day.svelte-3pptg2:hover {
+        box-shadow: 1px 0px 15px 1px var(--blue1);
+        border: var(--blue2) solid 2px !important;     }
+         
+    /*Rich Links*/
+    .theme-dark .rich-link-card {
+        border: 2px solid var(--blue6);
+    }
+
+    .theme-dark h1.rich-link-card-title {
+        color: var(--teal2);
+    }
+
+    /*Daily Stats*/
+    .theme-dark .color-empty {
+        fill: rgb(139, 139, 139) !important;
+    }
+
+    /*MySnippets*/
+ 
+    .theme-dark .MySnippets-statusbar-menu .checkbox-container.is-enabled::after {
+        content: "❆";
+        color: black;
+        background-color: transparent !important;
+        top: -5px;
+        left: 13px;
+        font-size: 28px;
+        transform: rotate(340deg);
+    }
+
+    /*Theme Store*/
+    .theme-dark .community-theme:nth-child(3n) {
+        border: rgb(121, 118, 118) 3px solid;
+        color: rgb(176, 179, 178);
+    }
+    
+    .theme-dark .community-theme:nth-child(3n) button.mod-cta{
+        background-color: rgb(94, 87, 87);
+        color: white;
+    }
+
+    .theme-dark .community-theme:nth-child(3n):hover {
+        background-color: rgb(82, 82, 82);
+        transform: scale(1.05);
+        color: white;
+    }
+    
+    .theme-dark .community-theme:nth-child(3n+2) {
+        border: rgb(131, 77, 27) 3px solid;
+        color: rgb(216, 150, 27);
+    }
+
+    .theme-dark .community-theme:nth-child(3n+2) button.mod-cta {
+        background-color: rgb(150, 90, 34);
+        color: white;
+    }
+    
+    .theme-dark .community-theme:nth-child(3n+2):hover {
+        background-color: var(--gold2);
+        transform: scale(1.05);
+        color: white;
+        border: none;
+    }
+
+    .theme-dark .community-theme-info,
+    .theme-dark .community-plugin-downloads-text,
+    .theme-dark .community-theme-downloads,
+    .theme-dark .clickable-icon {
+        color: white;
+    }
+
+    /*Selected*/
+    .theme-dark .community-theme.is-selected {
+        background-color: rgb(36, 74, 117);
+        border: none;
+        color: white;
+    }
+    
+    .theme-dark .community-theme.is-selected button.mod-cta {
+         color: white;
+    }
+    
+    .theme-dark .community-theme.is-selected:hover {
+        background-color: transparent;
+        border: var(--gold1) solid 2px;
+        color: white;
+    }
+
+    /*Plugin Store*/
+    .theme-dark .community-plugin-item:nth-child(3n) {
+        border: rgb(121, 118, 118) 3px solid;
+        color: rgb(176, 179, 178);
+    }
+    
+    .theme-dark .community-plugin-item:nth-child(3n) button.mod-cta{
+        background-color: rgb(94, 87, 87);
+        color: white;
+    }
+
+    .theme-dark .community-plugin-item:nth-child(3n):hover {
+        background-color: rgb(82, 82, 82);
+        transform: scale(1.05);
+        color: white;
+    }
+    
+    .theme-dark .community-plugin-item:nth-child(3n+2) {
+        border: rgb(131, 77, 27) 3px solid;
+        color: rgb(216, 150, 27);
+    }
+
+    .theme-dark .community-plugin-item:nth-child(3n+2) button.mod-cta {
+        background-color: rgb(80, 46, 13);
+        color: white;
+    }
+    
+    .theme-dark .community-plugin-item:nth-child(3n+2):hover {
+        background-color: rgb(150, 104, 6);
+        transform: scale(1.05);
+        color: white;
+        border: none;
+    }
+
+    .theme-dark .community-plugin-item-info,
+    .theme-dark .community-plugin-downloads-text,
+    .theme-dark .community-plugin-item-downloads,
+    .theme-dark .clickable-icon {
+        color: white;
+    }
+
+    /*Day Planner*/
+    .theme-dark .event_item_color9 {
+        background-color: #1b257a !important;
+      }
+
+      .theme-dark .event_item:hover {
+          background-color: rgba(139, 96, 16, 0.616) !important;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,591 @@
+/*CCP 1: Basic Colors*/
+.theme-light {
+    --background-primary: var(--pink10);
+    --background-secondary: var(--pink12);
+    --background-secondary-alt: var(--pink10);
+    --background-modifier-border: var(--pink3);
+
+    --text-accent: var(--pink5);
+    --text-accent-hover: var(--pink5);
+
+    --text-highlight-bg: var(--pink7);
+    --text-selection: var(--pink7);
+    --text-error: var(--teal1);
+
+    --interactive-accent: var(--pink6);
+    --interactive-hover: var(--pink6);
+    --interactive-accent-hover: var(--pink6);
+}
+
+/*CCP 2: Specific Panes (Core Plugins) */
+
+    /*CCP 2.1 File Explorer*/
+        /*Header Image*/
+        .theme-light .workspace-leaf-content[data-type="file-explorer"] .nav-header::after {
+            background: center/ contain no-repeat url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAEVklEQVRIib3WbUxbVRgA4Pf29q4fQGtLLYWuNJQyS/nYgDlTcWbK2JSoi0z4MTcim4GY6Ez8MZMtSwiLJhtENzUugBp0/lCyjxhM2HRzE4PMAUMKDFpoKaWstNAG+kXL7bn1hw5paeHykb3/7jnvfZ/35Jx7czDYhFC8/10qn8uUTtt9OsvXbzsBAJTvfcZiEQIVzsQ4Norqt9VXeJe+g20ELDzT8lROesoXBWrpM4lPcOL/7J2Yuas1mSWiBP0OVYomXSaSEgSDOWJyjA8YrHe69ePHdeeOuTcEF3zYwi8qTOs4uDc7a+m4309Ca/swlO3LCctHiILvf+7tvNWr2687d8zNpAuVfnn9kFTEO5TI5yoZOBYXCARRyfMqeWQem01AgVoKQ0Y7ZCrEi+M4zoDDr+RpXJ75CzqAo6vCBTWt3O2KhB9LnlPtl0n4BJ0m06RC+K3LEAY/wtUZKXtSqhq4K8M1NYw8Bf+ntw7k7yUInI4JAAAYBoBj0XcxIzVRLkrk5TBWKlAu1pwsfymnaC3oo9jztCLqeDCIghS5ML8inCYTHuTHszd08iNjxOy0eGYofUw4+4NvZEpZYuZmoghRoB+z3TY1V/pjwhKxUC0SxLE2E/4v2AAAMWGKQmIyiGhVGjLYaeXhOAN2qKQvKqoa+FHhN5tu1R95teCiPFlAq+CEfY5WHgBA2lahhCfgZS37nIrqWjXFGmVVpkIct1qRBRLB791GyM2Q0IYds16Xy09alsGCONaBTIU4YbUC3nkStHorFObJgcveQhu+/2Cyy3ihwrwMdrnn/UFEARNf8UuDOA4Bmu2pUefIIIIAiSCe839DFEXB5V/7+/uN1ncBohwux5yrob1nbIj2EqIEjjPgntYcNna9Y8Ryra1vd8fpcl1UuOfjw1PakSlLKLR+mIFhwIvngD9ALmkGQ8bG6sVTuAwuu3jjTMVr+UUxfrW0Q5bEg4fT7sXnaYfHGNZcuNqCb0sVlwoTOCtvMI0Iwb8rBwDoGphwDo1azy6dDztcOVsX1Op0ccZGUQAA3fgMSIQJwR/a+gYHDNazN0+9cSMmzOQSAi6HoH05iBX+AAlt7cNau8NbMcgz9ENNDRWZE4a4Xd6hySnXVMqTPPp/hIhAiIK65naz3xcsGfzkyGSsvLC9HP386PSgYeruesCZWR91u8toarx871t/wJfb+VF5TBQgYsUAAH1j06f/uG/M3p2vUNJFDRan58ov2lqT1ny+p7GaXP2NKPALLKfb0Nntfmib6yh+VrVTyOewAABsDo+v4+/x4W1ykTIrPYmHYQAe30LoTrdx+IHe9umV4y830W0UIOJ6e6r+KzkKwSUUQpV1PuvYLiqzWJ4s3BlCKDRhd3X9VVt2c1fttdxk3pZSDpfNmnF6DaPDzkum5kr/WtAwOAw9UW1Ya6F1wY8bBQDATp5vSqJIxlUUClY8LhQAgOlmzM+ygHi9/sQ79O4vmxT/AORRsP60h5HdAAAAAElFTkSuQmCC");
+            height: 60px !important;
+            margin-top: 0px;
+            margin-bottom: -30px;
+            transform: rotate(20deg);
+            }
+
+        /*Vault Title*/
+        .theme-light .nav-folder.mod-root > .nav-file-title,
+        .theme-light .nav-folder.mod-root > .nav-folder-title {
+           background: var(--gray2);
+           background: linear-gradient(to top, var(--pink11) 0%, var(--pink8) 100%);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+        }
+
+        /*Folder Colors*/
+        .theme-light {
+            --lgrad1: rgba(210, 185, 231, 0.89); 
+            --lgrad2: rgba(195, 163, 231, 0.808);
+            --lgrad3: rgba(216, 154, 231, 0.767);
+            --lgrad4: rgba(218, 159, 230, 0.822);
+            --lgrad5: rgba(228, 176, 230, 0.623);
+            --lgrad6: rgba(184, 200, 243, 0.705);
+            --lgrad7: rgba(183, 204, 243, 0.644);
+            --lgrad8: rgba(155, 184, 245, 0.548);
+        }
+    
+        /*Nav Action Buttons*/
+        .theme-light .nav-buttons-container .nav-action-button {
+            color: var(--pink11);
+        }
+
+        /*Collapse Icon*/
+        .theme-light .collapse-icon svg {
+            color: var(--pink8) !important;
+        }
+        
+    
+    /*CCP 2.2 Graph*/
+    .theme-light .graph-view.color-fill {
+        color: var(--pink6) !important;
+    }
+
+    .theme-light .graph-view.color-fill-highlight {
+        color: white;
+    }
+
+    .theme-light .graph-view.color-line-highlight {
+        color: var(--pink5);
+    }
+
+    .theme-light .graph-view.color-fill-tag {
+        color: var(--blue1);
+    }
+
+    /*CCP 2.3 Search Pane*/
+    .theme-light .workspace-leaf-content[data-type="search"] .search-result-file-match,
+    .theme-light .workspace-leaf-content[data-type="search"] .tree-item-inner {
+        color: var(--brown4) !important;
+    }
+
+    /*CCP 2.4 Tag Pane*/
+    .theme-light .tag-container .tree-item .tree-item-self {
+        color: var(--pink5) !important;
+    }
+
+        /*counter*/
+        .theme-light .tag-container .tree-item .tree-item-flair {
+            border: solid 2px var(--pink6);
+            color: var(--pink5);
+        }
+
+        .theme-light .tag-container .tree-item >.tree-item-children .tree-item .tree-item-flair {
+        border: solid 2px var(--purple1);
+        color: var(--purple4);
+        background-color: var(--background-secondary);
+        }
+        
+        .theme-light .tag-container .tree-item >.tree-item-children .tree-item  >.tree-item-children .tree-item .tree-item-flair {
+        border: solid 2px var(--blue5);
+        color: var(--blue2);
+        background-color: var(--background-secondary);
+        }
+
+        /*gradient #*/
+        .theme-light .tag-container .tree-item .tree-item-self .tree-item-inner::before {
+            color: var(--pink5);}
+          
+          .theme-light .tag-container .tree-item .tree-item-self .tree-item-inner {
+            color: var(--pink5);
+            border-bottom: 1px solid var(--pink6);
+          }
+          
+        .theme-light .tag-container .tree-item .tree-item-self:hover {
+            background-color: var(--pink8);
+        }
+
+        .theme-light .tag-container .tree-item .tree-item-self .tree-item-inner:hover,
+        .theme-light .tag-container .tree-item >.tree-item-children .tree-item-self .tree-item-inner:hover,
+        .theme-light .tag-container .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner:hover {
+            text-shadow: none;
+            color: white;
+        }
+
+        .theme-light .tag-container .tree-item >.tree-item-children .tree-item-self .tree-item-inner::before{
+            content: "#" ;
+            color: var(--purple2);
+        }
+        
+        .theme-light .tag-container .tree-item >.tree-item-children .tree-item-self .tree-item-inner {
+            color: var(--purple2);
+            border-bottom: none;
+        }
+
+        .theme-light .tag-container .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner {
+            font-size: 1.1em;
+            color: var(--blue2);
+        }
+        
+        .theme-light .tag-container .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before {
+            color: var(--blue2);
+        }
+
+    /*CCP 2.5 Outline Pane*/
+
+/*CCP 3: Text Colors*/
+
+    /*Bold*/ /*no change*/
+    
+
+    /*Italics*/ /*no change*/
+
+    /*Links*/ /*no change*/
+    
+    /*Inline Code*/ 
+    .theme-light .cm-s-obsidian span.cm-inline-code, 
+    .theme-light .markdown-preview-view code {
+    color: var(--purple4);
+    }
+
+    .theme-light .markdown-preview-view code {
+    font-weight: bold;
+}
+ 
+    /*Comment*/ 
+    .theme-light .cm-s-obsidian span.cm-comment {
+        color: var(--purple3);
+        font-weight: 700 ;
+     }
+
+/*CCP 4: Workspace Layout*/
+    /*Active Note Pane*/
+    .theme-light .workspace-leaf.mod-active .view-header {
+        background: var(--pink2);
+        background: linear-gradient(90deg, var(--pink3) 5%, var(--pink3) 18%, var(--purple5) 45%, transparent 90%, transparent 95%);
+        border-bottom: none;
+        border-radius: 15px;
+        margin-top: 2px;
+    }
+
+    .theme-light .workspace-leaf.mod-active .view-header-icon {
+        color: var(--pink5);
+    }
+
+    /*Search Bar*/
+    .theme-light .document-search-container {
+        background-color: var(--pink6);
+        border-radius: 20px;
+    }
+
+    .theme-light .document-search-button {
+        background-color: var(--pink7);
+        color: var(--text-normal);
+    }
+    
+    /*Frontmatter*/
+    .theme-light .frontmatter-container {
+        border: 2px solid var(--pink13); 
+    }
+
+    .theme-light .frontmatter-container-header {
+        background-color: var(--pink13);
+    }
+
+    /*Sidepanes*/
+    .theme-light .workspace-tab-header,
+    .theme-light .workspace-tab-header.is-after-active,
+    .theme-light .workspace-tab-header.is-before-active {
+        color: var(--pink11);
+    }
+
+    .theme-light .workspace-tab-header.is-active {
+        border: 2px solid var(--pink13);
+    }
+
+    /*Side Dock Ribbon*/
+    .theme-light .side-dock-ribbon-action,
+    .theme-light .workspace-ribbon-collapse-btn {
+        color: var(--pink11)
+    }
+
+    /*collapsed side dock*/
+    .theme-light .workspace-ribbon.is-collapsed .side-dock-ribbon-action {
+        border: var(--pink3) 1px solid;
+        box-shadow: inset -4px -4px 4px -3px var(--pink13);
+        color: var(--pink11);
+    }
+
+    /*Status Bar*/
+    .theme-light .status-bar {
+        border-top: var(--pink3) solid 1px;
+    }
+
+/*CCP 5: Settings*/
+    /*CCP 5.1: Settings*/
+    .theme-light .modal.mod-settings .vertical-tab-header,
+    .theme-light .vertical-tab-nav-item {
+        background-color: var(--pink3);
+        border-radius: 20px;
+    }
+    
+    .theme-light .vertical-tab-nav-item.is-active {
+        background-color: var(--blue1);
+        border-radius: 10px;
+    }
+    
+    
+    .theme-light .vertical-tab-header-group-title {
+        background-color: var(--pink8);
+    
+    }
+    
+
+    /*CCP 5.2: Theme Store*/
+    .theme-light .modal-title {
+        color: var(--pink11);
+    }
+
+    /*CCP 5.3 Plugin Store*/
+    .theme-light .community-plugin-search {
+        background-color: var(--pink12);
+    }
+
+/*CCP 6: Other Elements*/
+/*Scrollbar*/
+    .theme-light ::-webkit-scrollbar-thumb {
+        background-color: var(--background-secondary);
+        border: 2px solid var(--pink7);
+        }
+
+    /*Sliders*/
+    .theme-light input[type="range"] {
+        background-color: var(--pink3);
+    }
+
+    .theme-light input[type="range"]::-webkit-slider-thumb {
+        background-color: var(--blue3);
+    }
+
+    /*Notice*/
+    .theme-light .notice {
+        background-color: var(--blue1);
+        color: var(--brown4);
+        box-shadow: 5px 5px 20px -2px var(--blue7);
+    }
+
+    /*Toggle*/
+    .theme-light .checkbox-container::after {
+    content: "☁️";
+        background-color: transparent !important;
+        top: -10px;
+        left: -8px;
+        font-size: 19px;
+        transform: rotate(0deg);
+    }
+    
+    
+    .theme-light .checkbox-container.is-enabled::after {
+        content: "🌨️";
+        background-color: transparent !important;
+        top: -10px;
+        left: 12px;
+        font-size: 25px;
+        transform: rotate(0deg);
+    }
+    
+    .theme-light .checkbox-container.is-enabled {
+        background-color: var(--lblue5);
+    }
+
+    /*HR*/
+    .theme-light div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
+        content: '';
+        background: var(--pink13);
+        }
+
+
+    .theme-light div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
+        content: " ꒰·◡·꒱ ";
+        color: var(--pink11) !important;
+        transform: translate(-50%, -50%) rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    .theme-light .markdown-preview-view hr {
+        color: var(--pink13);
+    }
+
+    .theme-light .markdown-preview-view hr::after {
+        content: "꒰·◡·꒱";
+        transform: translate(-50%, -50%) rotate(0deg);
+        transform-origin: 50% 50%;
+        color: var(--pink11) !important;
+    }
+
+    /*Aside*/
+    .theme-light aside:hover {
+        border: 1px solid var(--pink3);
+        border-right: 4px solid var(--pink3);
+        border-bottom: 4px solid var(--pink3);
+    }
+
+    /*Tags Edit*/
+    .theme-light .cm-s-obsidian span.cm-hashtag {
+        background: rgb(237,255,255);
+        background: radial-gradient(circle, var(--pink12) 69%, vaR(--pink3) 100%);
+        color: var(--pink11);
+        border-top: var(--pink13) 1px solid;
+        border-bottom: var(--pink13) 1px solid;
+    }
+
+    .theme-light .cm-s-obsidian span.cm-hashtag-end {
+        border-right: var(--pink13) 1px solid;
+    }
+
+    /*Tags Preview*/
+    .theme-light .tag {
+        background: rgb(237,255,255);
+        background: radial-gradient(circle, rgba(237,255,255,1) 69%, var(--pink12) 100%);
+        border: 1px solid var(--pink13);
+        color: var(--pink11);
+    }
+
+    .theme-light .tag:hover {
+        color: black;
+        border: var(--pink13) 1px solid !important;
+    }
+
+    /*Quotes*/
+    .theme-light div:not(.CodeMirror-activeline)>.HyperMD-quote {
+        background-color: var(--background-secondary); 
+        border-color: var(--pink13)!important; 
+    }
+
+    .theme-light .markdown-preview-view blockquote {
+        border-left: 0.2em solid var(--pink13);
+        border-top: 0.1em solid var(--pink13);
+        border-bottom: 0.2em solid var(--pink13);
+        border-right: 0.1em solid var(--pink13);
+        
+        box-shadow: 0px 2px 2px 0px var(--pink8);
+    }
+
+    .theme-light .markdown-preview-view blockquote:hover:before {
+        background: radial-gradient(circle, white 0%, white 13%, var(--pink3) 47%, var(--pink13) 78%);
+    }
+
+    /*HTML*/
+    .theme-light cite {
+        color: var(--pink11);
+    }
+
+    .theme-light cite::before,
+    .theme-light cite::after {
+        content: "☁️";
+        padding: 8px;
+    }
+
+    /*Codeblock*/
+    .theme-light .cm-s-obsidian .HyperMD-codeblock {
+        line-height: 1.3;
+        color: var(--purple4) !important;
+        font-size: 0.85em;
+        background-color: var(--purple6);
+        }
+
+    /*Table*/
+    .theme-light table {
+        background-color: var(--pink6);
+        border: var(--purple6) 1px solid !important;
+    }
+    
+    .theme-light tr:nth-child(6n+1) {
+        background-color: var(--pink13) !important;
+    }
+    
+    .theme-light table thead th:hover,
+    .theme-light table thead tr:hover,
+    .theme-light table th:hover,
+    .theme-light table tr:hover {
+    background-color: var(--pink11);
+    }
+    
+    .theme-light .markdown-preview-view table th,
+    .theme-light .markdown-preview-view table td {
+        border-color: var(--pink6);
+    }
+
+    /*Lists*/
+    .theme-light .cm-hmd-list-indent .cm-tab::before, 
+    .theme-light ul ul::before {
+    content:'';
+    border-left: 1px solid var(--pink13);
+    position: absolute;
+    }
+    
+    .theme-light span.cm-formatting-list-ul:after {
+    content: "☁️";
+    }
+
+    /*Checklist Preview*/
+    .theme-light .markdown-preview-view .task-list-item-checkbox::before {
+        color: rgb(202, 142, 230);
+        text-shadow: 1px 2px 2px #7956d886;
+    }
+    
+    .theme-light .markdown-preview-view .task-list-item-checkbox:checked:before {
+        color: rgb(160, 133, 231);
+    }
+
+    
+/*CCP 7: Additional*/
+    /*Pseudo Kanban*/
+    .theme-light.kanban ul ul li:nth-child(even) {
+        background: var(--pink3);
+      }
+      
+      .theme-light.kanban ul ul li:nth-child(odd) {
+        background: var(--lgrad6);
+      }
+
+    /*Loading Page*/
+    .theme-light .progress-bar {
+        background-color: var(--background-secondary) !important;
+    }
+
+    /*Horizontal Scroll*/
+    
+    .hscroll table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+/*CCP8- Plugins*/
+    /*Icon Folder Plugin*/
+    /*subfolder icons as light blue*/
+    .theme-light .obsidian-icon-folder-icon {
+        color: var(--pink11);
+        }
+    
+    /*Calendar Plugin*/
+    .theme-light .day.svelte-q3wqg9 {
+        color: var(--pink2) !important;
+        font-weight: bolder;
+        font-size: 1em !important;
+        height: 40px !important;
+    }
+    
+    .theme-light .day.svelte-q3wqg9:hover {
+    box-shadow: 1px 0px 15px 1px var(--pink6);
+        border: var(--pink13) solid 2px !important;
+        background-color: white !important;}
+    
+    .theme-light th.svelte-pcimu8 {
+        color: white;
+    }
+    
+    /*Fantasy Calendar*/
+    .theme-light .fantasy-title.svelte-10wwl4f {
+        color: var(--pink11);
+    }
+    
+    .theme-light .day.svelte-3pptg2 {
+        color: var(--pink11) !important;
+    }
+    
+    .theme-light .day.svelte-3pptg2:hover {
+        box-shadow: 1px 0px 15px 1px var(--pink6);
+        border: var(--pink13) solid 2px !important;
+        background-color: white !important;}
+    
+    /*Rich Links*/
+    .theme-light .rich-link-card {
+        border: 3px solid var(--pink13);
+    }
+    
+    .theme-light h1.rich-link-card-title {
+        color: var(--pink11) !important; }
+    
+    /*Daily Stats*/
+    .theme-light .color-empty {
+        fill: rgb(240, 251, 252);
+    }
+    
+    .theme-light text {
+        fill: var(--pink11);
+    }
+    
+    /* Day Planner*/
+    .theme-light .ei_Title {
+        color: var(--pink2) !important;
+    }
+    
+    .theme-light .event_item {
+      overflow: hidden !important;
+    }
+    
+    .theme-light #now-line, .timeline-time {
+      background-color: var(--pink5) !important;
+    }
+    
+    .theme-light .event_item:hover {
+      background-color: var(--background-secondary) !important;
+      box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+    }
+    
+    .theme-light .event_item_color1 {
+      background-color: #ebc5e0 !important;
+    }
+    
+    .theme-light .event_item_color2 {
+      background-color: #f1bfe3 !important;
+    }
+    
+    .theme-light .event_item_color3 {
+      background-color: #F8CAEC !important;
+    }
+    
+    .theme-light .event_item_color4 {
+      background-color: #F6BFE8 !important;
+    }
+    
+    .theme-light .event_item_color5 {
+      background-color: #F5B3E4 !important;
+    }
+    
+    .theme-light .event_item_color6 {
+      background-color: #F4A8E1 !important;
+    }
+    
+    .theme-light .event_item_color7 {
+      background-color: #F39CDD !important;
+    }
+    
+    .theme-light .event_item_color8 {
+      background-color: #F191D9 !important;
+    }
+    
+    .theme-light .event_item_color9 {
+      background-color: #F095D6 !important;
+    }
+    
+    .theme-light .event_item_color10 {
+      background-color: #d374bb !important;
+    }
