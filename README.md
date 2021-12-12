@@ -3,6 +3,7 @@
 - [About](https://github.com/Emrie-Candera/Bubble-Space-Theme#about)
 	- [🔵 Bubble Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-bubbles-light-mode)
 	- [🌌 Space Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-space-dark-mode)
+	- [Multiple Color Presets Available!](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-multiple-color-presets)
 - [Also Check Out](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-also-check-out)
 - [Up Next](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-up-next)
 - [Releases](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-releases)
@@ -22,6 +23,10 @@ This theme is inspired by Bubbles for Light Mode and Outer Space for Dark Mode h
 
 ### 🌌 Space (Dark Mode)
 ![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/2b98fd9c23bf9462a469df156c4f8b6af2252718/images/Space%20(Dark).png)
+
+### 🎨 Multiple Color Presets
+See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Mini-Snippet-Store-(Demos)#bubble)
+![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Theme%20Presets.gif?raw=true)
 
 ## 🐱‍🚀 Also Check Out
 - [Mini Snippet Store](https://github.com/Emrie-Candera/Bubble-Space-Theme/tree/main/Mini%20Snippet%20Store)
