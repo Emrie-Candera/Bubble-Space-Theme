@@ -1,3 +1,56 @@
+/* @settings
+name: Bubble Space Settings
+id: bubble-space
+settings: 
+    - 
+        id: bs-workspace
+        title: Workspace
+        type: heading
+        level: 1
+    - 
+        id: bs-theme-presets
+        title: Theme Presets
+        description: Some color presets
+        type: heading
+        level: 2
+    -
+        id: bs-bubble-presets
+        title: Bubble Mode Presets
+        description: Color Theme Presets for Bubble (Light) Mode
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Cotton Candy Pink
+                value: cc-pink
+            - 
+                label: Mint Green
+                value: mint-green
+            -
+                label: Boba Milk Tea
+                value: milk-tea
+    -
+        id: bs-space-presets
+        title: Space Mode
+        description: Color Theme Presets for Space (Dark) Mode
+        type: class-select
+        allowEmpty: true
+        default: none
+        options:
+            - 
+                label: Blue Christmas
+                value: bl-xmas
+            -
+                label: Blood Moon
+                value: bl-moon
+    -
+        id: bs-header-img
+        title: Header Image
+        description: toggle off to hide the header image in the file explorer
+        type: class-toggle
+        default: true
+*/
 /* ==========================  TOC ========================== */
 /* Contents
     I. COMMON CSS SNIPPETS (for both light and dark mode)
@@ -6897,60 +6950,6 @@ background: rgb(123, 22, 206);
 
 
 /* ==========  PART IV: STYLE SETTINGS =========  */
-
-/* @settings
-name: Bubble Space Settings
-id: bubble-space
-settings: 
-    - 
-        id: bs-workspace
-        title: Workspace
-        type: heading
-        level: 1
-    - 
-        id: bs-theme-presets
-        title: Theme Presets
-        description: Some color presets
-        type: heading
-        level: 2
-    -
-        id: bs-bubble-presets
-        title: Bubble Mode Presets
-        description: Color Theme Presets for Bubble (Light) Mode
-        type: class-select
-        allowEmpty: true
-        default: none
-        options:
-            - 
-                label: Cotton Candy Pink
-                value: cc-pink
-            - 
-                label: Mint Green
-                value: mint-green
-            -
-                label: Boba Milk Tea
-                value: milk-tea
-    -
-        id: bs-space-presets
-        title: Space Mode
-        description: Color Theme Presets for Space (Dark) Mode
-        type: class-select
-        allowEmpty: true
-        default: none
-        options:
-            - 
-                label: Blue Christmas
-                value: bl-xmas
-            -
-                label: Blood Moon
-                value: bl-moon
-    -
-        id: bs-header-img
-        title: Header Image
-        description: toggle off to hide the header image in the file explorer
-        type: class-toggle
-        default: true
-*/
 
 /* --------------------- STYLING A: Theme Presets ------------------------*/
 
