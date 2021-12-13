@@ -42,4 +42,4 @@ See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Mini-Sn
 ## 🚀 Releases
 * ⭐ [v.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.1)- November 9, 2021
 * ⭐[v1.2](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.2)- December 8, 2021
-* ⭐[v1.2](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.3)
+* ⭐[v1.3](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.3)
