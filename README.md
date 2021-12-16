@@ -19,10 +19,10 @@ image as of v1.3
 This theme is inspired by Bubbles for Light Mode and Outer Space for Dark Mode hence the name "Bubble Space"! It's the theme I've been using in my creative vault for a while and still has some ways to go! 
 
 ### 🔵 Bubbles (Light Mode)
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/2b98fd9c23bf9462a469df156c4f8b6af2252718/images/Bubble%20(Light).png)
+![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20v1.3.png)
 
 ### 🌌 Space (Dark Mode)
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/2b98fd9c23bf9462a469df156c4f8b6af2252718/images/Space%20(Dark).png)
+![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Space%20v1.3.png?raw=true)
 
 ### 🎨 Multiple Color Presets
 See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Mini-Snippet-Store-(Demos)#bubble)
