@@ -10,8 +10,8 @@
 
 ### ❗❗ Don't forget to check out the [wiki](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki) as well!
 
-<img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/336ce1392ba191f3f28f69b6ae47f86c50ece000/screenshot.png"></img>
-
+<img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20Space%20v1.3.png?raw=true"></img>
+image as of v1.3
 
 ---
 
