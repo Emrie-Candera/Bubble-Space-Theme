@@ -35,7 +35,6 @@ See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Bubble-
 ---
 
 ## 🚀 Up Next: 
-- Mobile Optimization
 - Style Settings 
 - PDF Export Styling
 
