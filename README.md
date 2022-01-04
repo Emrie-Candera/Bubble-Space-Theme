@@ -10,8 +10,8 @@
 
 ### ❗❗ Don't forget to check out the [wiki](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki) as well!
 
-<img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20Space%20v1.3.png?raw=true"></img>
-image as of v1.3
+<img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20Space%20v1.4.png?raw=true"></img>
+image as of v1.4
 
 ---
 
@@ -19,14 +19,13 @@ image as of v1.3
 This theme is inspired by Bubbles for Light Mode and Outer Space for Dark Mode hence the name "Bubble Space"! It's the theme I've been using in my creative vault for a while and still has some ways to go! 
 
 ### 🔵 Bubbles (Light Mode)
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20v1.3.png)
+![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20v1.4.png)
 
 ### 🌌 Space (Dark Mode)
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Space%20v1.3.png?raw=true)
+![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Space%20v1.4.png?raw=true)
 
 ### 🎨 Multiple Color Presets
-See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Mini-Snippet-Store-(Demos)#bubble)
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Theme%20Presets.gif?raw=true)
+See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Bubble-Space-Color-Presets)
 
 ## 🐱‍🚀 Also Check Out
 - [Mini Snippet Store](https://github.com/Emrie-Candera/Bubble-Space-Theme/tree/main/Mini%20Snippet%20Store)
@@ -45,3 +44,4 @@ See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Mini-Sn
 * ⭐[v.1.1](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.1)- November 9, 2021
 * ⭐[v1.2](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.2)- December 8, 2021
 * ⭐[v1.3](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.3)- December 12, 2021
+* ⭐[v1.4](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.4)- January 5, 2022
