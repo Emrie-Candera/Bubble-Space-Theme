@@ -2176,7 +2176,6 @@
     color: var(--mgbg);
     font-size: 1.2em;
     padding-top: 0px;
-
 }
 
 .modal.mod-settings .vertical-tab-nav-item.is-active {
@@ -2193,10 +2192,6 @@
     padding: 8px 0px 0px 8px;
     background-color: var(--mnbg);
     font-size: 1em;
-}
-
-.modal.mod-settings .vertical-tab-content-container {
-    height: 750px !important;
 }
 
 /* @ SETTINGS C3: Theme Store*/
