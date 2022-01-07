@@ -2886,19 +2886,28 @@ button.copy-code-button {
 /* @ MARKDOWN D1: HR*/
 hr {
     border-width: 2px;
+    overflow: visible;
+}
+
+.workspace-leaf-resize-handle::after {
+    visibility: hidden;
 }
 
 hr::after {
     content: var(--hrcon);
     color: var(--hrcol);
     display: inline-block;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: var(--hrtrans);
     transform-origin: 50% 50%;
     padding: 0.8rem;
     background-color: var(--background-primary);
     clip-path: polygon(50% 0%, 68% 26%, 98% 35%, 79% 60%, 79% 91%, 51% 78%, 21% 91%, 23% 59%, 2% 35%, 33% 27%);
+    }
+
+    .hr.cm-line {
+        padding-top: 15px;
     }
 
 /* @ MARKDOWN D2: HTML Progress Bar*/
