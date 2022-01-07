@@ -2886,13 +2886,18 @@ button.copy-code-button {
 /* @ MARKDOWN D1: HR*/
 hr {
     border-width: 2px;
+    overflow: visible;
+}
+
+.workspace-leaf-resize-handle::after {
+    visibility: hidden;
 }
 
 hr::after {
     content: var(--hrcon);
     color: var(--hrcol);
     display: inline-block;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: var(--hrtrans);
     transform-origin: 50% 50%;
