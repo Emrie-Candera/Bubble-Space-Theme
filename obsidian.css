@@ -2906,6 +2906,10 @@ hr::after {
     clip-path: polygon(50% 0%, 68% 26%, 98% 35%, 79% 60%, 79% 91%, 51% 78%, 21% 91%, 23% 59%, 2% 35%, 33% 27%);
     }
 
+    .hr.cm-line {
+        padding-top: 15px;
+    }
+
 /* @ MARKDOWN D2: HTML Progress Bar*/
 progress {
     background: none;
