@@ -2197,7 +2197,6 @@
 /* @ SETTINGS C3: Theme Store*/
 .community-theme img {
 	width: max-width !important;
-	max-width: none;
 }
 
 .modal.mod-community-theme {
