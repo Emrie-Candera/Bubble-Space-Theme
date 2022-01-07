@@ -2195,6 +2195,10 @@
 }
 
 /* @ SETTINGS C3: Theme Store*/
+.community-theme img {
+ width:max-content; 
+}
+
 .modal.mod-community-theme {
     background-color: var(--background-primary);
     border-radius: 20px;
