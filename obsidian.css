@@ -2195,10 +2195,6 @@
 }
 
 /* @ SETTINGS C3: Theme Store*/
-img.community-theme-screenshot {
-	width: max-width !important;
-}
-
 .modal.mod-community-theme {
     background-color: var(--background-primary);
     border-radius: 20px;
