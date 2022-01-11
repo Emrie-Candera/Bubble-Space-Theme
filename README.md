@@ -1,4 +1,4 @@
-# ✨Bubble-Space-Theme
+# ✨Bubble-Space-Theme [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y67VRU2)
 
 - [About](https://github.com/Emrie-Candera/Bubble-Space-Theme#about)
 	- [🔵 Bubble Theme](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/README.md#-bubbles-light-mode)
