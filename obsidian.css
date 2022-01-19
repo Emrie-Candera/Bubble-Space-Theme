@@ -6302,5 +6302,5 @@ settings:
         title: Hide Titlebar
         description: toggle on to hide titlebar
         type: class-toggle
-        default: true
+        default: false
 */
