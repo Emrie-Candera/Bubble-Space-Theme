@@ -10,8 +10,8 @@
 
 ### ❗❗ Don't forget to check out the [wiki](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki) as well!
 
-<img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20Space%20v1.4.png?raw=true"></img>
-image as of v1.4
+<img src="https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20Space%20v1.5.png?raw=true"></img>
+image as of v1.5
 
 ---
 
@@ -19,10 +19,10 @@ image as of v1.4
 This theme is inspired by Bubbles for Light Mode and Outer Space for Dark Mode hence the name "Bubble Space"! It's the theme I've been using in my creative vault for a while and still has some ways to go! 
 
 ### 🔵 Bubbles (Light Mode)
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20v1.4.png)
+![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Bubble%20v1.5.png)
 
 ### 🌌 Space (Dark Mode)
-![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Space%20v1.4.png?raw=true)
+![](https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/images/Space%20v1.5.png?raw=true)
 
 ### 🎨 Multiple Color Presets
 See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Bubble-Space-Color-Presets)
@@ -44,3 +44,4 @@ See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Bubble-
 * ⭐[v1.2](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.2)- December 8, 2021
 * ⭐[v1.3](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.3)- December 12, 2021
 * ⭐[v1.4](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.4)- January 5, 2022
+* ⭐[v1.5](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.5)- February 7, 2022
