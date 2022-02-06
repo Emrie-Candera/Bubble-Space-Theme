@@ -6844,7 +6844,7 @@ h6 > a.internal-link,
 .theme-dark.neoni h1,
 .theme-dark.neoni .cm-header-1 {
     -webkit-text-stroke-color: var(--head1);
-    text-shadow: 0 0 0.7em var(--head1);
+    text-shadow: 0 0 0.9em var(--head1);
 }
 
 .theme-dark.neoni h2,
