@@ -1,12 +1,14 @@
-/*MG 1: Basic Colors*/
-.theme-light {
+/* @ MINT GREEN A: GENERAL COLORS */
+.theme-light.mint-green {
     --background-primary: var(--green1);
-    --background-secondary: var(--green2);
+    --background-secondary: rgb(204, 243, 220);;
     --background-secondary-alt: var(--green1);
     --background-modifier-border: var(--green3);
 
     --text-accent: var(--green8);
     --text-accent-hover: var(--green8);
+    --text-normal: rgb(41, 59, 49);
+    --text-error: var(--pink4);
 
     --text-highlight-bg: var(--lblue5);
     --text-selection: var(--lblue5);
@@ -15,606 +17,296 @@
     --interactive-accent: var(--green6);
     --interactive-hover: var(--green8);
     --interactive-accent-hover: var(--green8);
+
+    --migrad1: var(--fgrad3);
+    --migrad2: var(--fgrad4);
+    --migrad3: var(--fgrad5);
+
+    --mitext1: rgb(95, 204, 180);
+    --mitext2: rgb(63, 173, 87);
+    --mitext3: rgb(62, 177, 142);
+
+    --mgrad1: rgb(14, 136, 89);
+    --mgrad2: rgb(60, 125, 168);
+    --mgrad3: rgb(104, 101, 98);
+    --mgrad4: rgb(35, 147, 223);
+    --mgrad5: rgb(204, 108, 140);
+    --mgrad6: rgb(172, 124, 36);
 }
 
-/*MG 2: Specific Panes (Core Plugins)*/
-    /*MG 2.1 File Explorer*/
-    /*Header Image*/
-    .theme-light .workspace-leaf-content[data-type="file-explorer"] .nav-header::after {
-        background: center/ contain no-repeat url("data:image/png;base64,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");
-        height: 60px !important;
-        margin-top: 0px;
-        margin-bottom: -20px;
-        transform: rotate(20deg);
-        }
-
-    /*Vault Title*/
-    .theme-light .nav-folder.mod-root > .nav-file-title,
-    .theme-light .nav-folder.mod-root > .nav-folder-title {
-       background: var(--gray2);
-       background: linear-gradient(to top, var(--green6) 0%, var(--green7) 100%);
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-       margin-bottom: -5px;
-    }
-
-    /*Folder Colors*/
-    .theme-light {
-        --lgrad1: rgba(160, 224, 189, 0.89); 
-        --lgrad2: rgba(36, 211, 159, 0.315);
-        --lgrad3: rgba(31, 243, 190, 0.274);
-        --lgrad4: rgba(159, 230, 197, 0.822);
-        --lgrad5: rgba(149, 211, 180, 0.671);
-        --lgrad6: rgba(182, 231, 163, 0.705);
-        --lgrad7: rgba(217, 243, 183, 0.644);
-        --lgrad8: rgba(155, 245, 167, 0.548);
-    }
-
-    /*Nav Action Buttons*/
-    .theme-light .nav-buttons-container .nav-action-button {
-        color: var(--green7);
-    }
-
-    /*Collapse Icon*/
-    .theme-light .collapse-icon svg {
-        color: var(--green8) !important;
-    }
-    
-
-    /*CCP 2.2 Graph*/
-    .theme-light .graph-view.color-fill {
-        color: var(--green12) !important;
-    }
-
-    .theme-light .graph-view.color-fill-highlight {
-        color: white;
-    }
-
-    .theme-light .graph-view.color-line-highlight {
-        color: var(--green9);
-    }
-
-    .theme-light .graph-view.color-fill-tag {
-        color: var(--pink8);
-    }
-
-    /*CCP 2.4 Tag Pane*/
-    .theme-light .tag-container .tree-item .tree-item-self {
-        color: var(--lheader1) !important;
-    }
-
-
-        /*counter*/
-        .theme-light .tag-container .tree-item .tree-item-flair {
-            border: solid 2px var(--lheader1);
-            color: var(--lheader1);
-        }
-
-        .theme-light .tag-container .tree-item >.tree-item-children .tree-item .tree-item-flair {
-        border: solid 2px var(--lheader3);
-        color: var(--lheader3);
-        background-color: var(--background-secondary);
-        }
+/* @ MINT GREEN B: WORKSPACE */
+    .theme-light.mint-green {
+        /* ! Icons */
+        --col-svg: rgb(29, 150, 79);
+        --cola-svg: rgb(94, 93, 92);
         
-        .theme-light .tag-container .tree-item >.tree-item-children .tree-item  >.tree-item-children .tree-item .tree-item-flair {
-        border: solid 2px var(--blue5);
-        color: var(--blue2);
-        background-color: var(--background-secondary);
-        }
+        /* ! Vault Title*/
+        --vtfont: var(--font-bubble-header);
+        --vtcolor1: rgba(176, 207, 187, 0.596);
+        --vtcolor2: rgb(85, 216, 114);
 
-        /*gradient #*/
-        .theme-light .tag-container .tree-item .tree-item-self .tree-item-inner::before {
-            color: var(--lheader1);}
-          
-          .theme-light .tag-container .tree-item .tree-item-self .tree-item-inner {
-            color: var(--lheader1);
-            border-bottom: 1px solid var(--lheader1);
-          }
-          
-        .theme-light .tag-container .tree-item .tree-item-self:hover {
-            background-color: var(--lheader1);
-        }
+        /* ! Header Image*/
+        --lhead-img: url("data:image/png;base64,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");
+        --lhi-h: 60px;
+        --lhi-w: 300px;
+        --lhi-mt: -8px;
+        --lhi-mb: -10px;
+        --lhi-ml: -10%;
 
-        .theme-light .tag-container .tree-item .tree-item-self .tree-item-inner:hover,
-        .theme-light .tag-container .tree-item >.tree-item-children .tree-item-self .tree-item-inner:hover,
-        .theme-light .tag-container .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner:hover {
-            text-shadow: none;
-            color: white;
-        }
+        /* ! Header Icon */
+        --hic-ico: var(--lhic-ico);
+        --lhic-ico: var(--svg-vault);
+        --hic-fsize: 5px;
 
-        .theme-light .tag-container .tree-item >.tree-item-children .tree-item-self .tree-item-inner::before{
-            content: "#" ;
-            color: var(--lheader3);
-        }
+        /* ! Header Text */
+        --lht-text: 👋 I hope you have a great day!;
+        --lht-fsize: 20px;
+        --ht-fcol: rgb(90, 171, 236);
+
+        /* ! Folder Container*/
+        --fx-folcol: rgb(12, 136, 39) !important;
+        --fx-tfolcol: rgb(12, 110, 45) !important;
+        --fx-ficol: var(--text-normal);
+        --fi-act: rgb(35, 39, 35) !important;
+
+        --fcol-in: green;
+
+        /* ! Iterative Folder Colors*/
+        --fgrad1: rgba(160, 224, 189, 0.89); 
+        --fgrad2: rgba(36, 211, 159, 0.315);
+        --fgrad3: rgba(31, 243, 190, 0.274);
+        --fgrad4: rgba(159, 230, 197, 0.822);
+        --fgrad5: rgba(149, 211, 180, 0.671);
+        --fgrad6: rgba(165, 209, 148, 0.705);
+        --fgrad7: rgba(170, 214, 112, 0.644);
+        --fgrad8: rgba(148, 224, 158, 0.548);
+
+        /* ! Active Note Title Bar*/
+        --m-vhead: rgb(204, 241, 218);
         
-        .theme-light .tag-container .tree-item >.tree-item-children .tree-item-self .tree-item-inner {
-            color: var(--teal1);
-            border-bottom: none;
-        }
+        --ant-col1: rgb(163, 240, 174);
+        --ant-col2: rgba(148, 241, 168, 0.76);
+        --ant-col3: rgb(221, 255, 227);
 
-        .theme-light .tag-container .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner {
-            font-size: 1.1em;
-            color: var(--blue2);
-        }
+        /* ! Metadata Codeblock*/
+        --trule: rgb(42, 163, 73);
+        --tstring: rgb(109, 106, 110);
+
+        /* ! Document Search */
+        --ds-bg: rgb(167, 245, 177); 
+        --ds-err: rgb(229, 234, 236);
+
+         /* ! Empty Note*/
+        --es-con: "(◕‸◕ )";
+        --es-col: rgb(117, 218, 162);
+        --es-lfsize: 1.5em;
+        --es-ltfize: 1.4em;
+
+        /* ! Workspace Tab Header*/
+        --wth-trans: scale(1);
+        --col-tbar: rgb(22, 112, 57);
+
+        /* ! Tag Pane Flair*/
+        --fborder: 50px;
+        --tree-b4: "⚈";
+        --fl-fil: drop-shadow(0px 3px 2px rgb(61, 190, 44));
         
-        .theme-light .tag-container .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before {
-            color: var(--blue2);
-        }
+        --flair1: rgb(14, 114, 47);
+        --flair2: rgb(18, 32, 110);
+        --flair3: rgb(56, 58, 59);
+        --flair4: rgb(26, 58, 126);
+        --flair5: rgb(155, 56, 106);
+        --flair6: rgb(136, 98, 15); 
 
-    /*CCP 2.5 Outline Pane*/
+        /* ! Graph*/
+        --garrow: #15883b; /* ? arrow */
+        --gtag: #aed6e6; /* ? tag */
+        --gattach: #615e5a; /* ? attachments */
+        --gfill: var(--green6); /* ? regular node */
+        --gunfill: #70e6e0c2; /* ? unresolved links */
+        --gcircle: rgb(26, 182, 39); /* ? highlighted node outline */
+        --gline: rgba(78, 194, 122, 0.452); /* ? line */
+        --gtext: var(--text-normal); /* ? text */
+        --ghl: white; /* ? highlighted node */
+        --glhl: rgb(96, 219, 151);   /* ? highlighted line */
 
-/*CCP 3: Text Colors*/
+        /* ! Side Dock Ribbon*/
+        --srcol: var(--green8);   
+        --srbrcol: var(--green8);
+        --srbrcol2: var(--green11);
 
-    /*Headers*/
-    .theme-light {
-        --lheader1: var(--green12);
-        --lheader2: var(--green13);
-        --lheader4: var(--lblue2);
-        --lheader5: var(--gray3);
-        --lheader6: var(--gray2);
-    }
+        /* ! Modal*/
+        --mbg: rgb(233, 252, 242);
+        --mgbg: rgb(110, 207, 154);
 
-    /*Bold*/ /*no change*/
+        --mo-bg: linear-gradient(191deg, rgba(159, 235, 184, 0.336) 0%, rgba(3, 35, 7, 0.445) 29%, rgba(4, 49, 28, 0.438) 60%, rgba(6, 63, 14, 0.349) 76%, rgba(98, 192, 134, 0.596) 96%);
+        
+        /* ! Theme Store*/
+        --theme-sel: rgb(154, 194, 161);
+        --button-col: rgb(0, 0, 0);
+        --button-bg:linear-gradient(rgb(255, 255, 255), #95f1a9);
+
+        --hfont: var(--font-bubble-header);
+        --hcol: skyblue;
+
+        /* ! Buttons */
+        --btcol1: var(--green8);
+        --btcol2: var(--green11);
     
+        --bwarn: rgb(194, 129, 43);
+        --bwbort: rgb(214, 146, 114) 2px solid;
+        --bwborl: rgb(163, 100, 27) 1px solid;
+        --bwshad: inset -4px -4px 4px -3px rgb(231, 146, 96);
 
-    /*Italics*/ /*no change*/
+        /* ! Scrollbar*/
+        --scrollb: rgba(91, 196, 105, 0.925);
 
-    /*Links*/ /*no change*/
-    
-    /*Inline Code*/ /*no change*/
-    .theme-light .cm-s-obsidian span.cm-inline-code, 
-    .theme-light .markdown-preview-view code {
-    color: var(--purple4);
-    }
-    
-    .theme-light .markdown-preview-view code {
-        font-weight: bold;
-    }
-    /*Comment*/ 
-    .theme-light .cm-s-obsidian span.cm-comment {
-        color: var(--green12);
-        font-weight: 700 ;
-     }
+        /* ! Slider*/
+        --slide1: rgb(211, 219, 214);
+        --slide2: rgb(94, 221, 147);
 
-/*CCP 4: Workspace Layout*/
-    /*Active Note Pane*/
-    .theme-light .workspace-leaf.mod-active .view-header {
-        background: var(--green6);
-        background: linear-gradient(90deg, var(--green6) 5%, var(--green4) 18%, var(--green2) 45%, transparent 90%, transparent 95%);
-        border-bottom: none;
-        border-radius: 15px;
-        margin-top: 2px;
-    }
-    
-    .theme-light .workspace-leaf.mod-active .view-header-icon {
-        color: var(--green7);
-    }
-    
+        /* ! Notice*/
+        --nbg: rgb(248, 230, 206);
+        --nshad: rgb(187, 132, 69);
 
-    /*Search Bar*/
-    .theme-light.theme-light .document-search-container {
-        background-color: var(--green9);
-        border-radius: 20px;
-    }
-    
-    .theme-light.theme-light .document-search-button {
-        background-color: var(--green1);
-        color: var(--text-normal);
-    }
-    
-    /*Frontmatter*/
-    .theme-light .frontmatter-container {
-        border: 2px solid var(--green3); 
-        color: black;
-    }
-    
-    .theme-light .frontmatter-container-header {
-        background-color: var(--green3);
-        color: rgb(70, 63, 63);
+        /* ! Toggle*/
+        --togcon: "🍀";
+        --togcona: "🍀";
+        --togbg: rgb(176, 226, 205);
+        --togsz: 16px;
+
+         /* ! Dropdown */
+        --dcol1: var(--green8);
+        --dcol2: var(--green11);
     }
 
-    /*Sidepanes*/
+/* @ MINT GREEN C: MARKDOWN*/
+.theme-light.mint-green {
+    --fbold: rgb(74, 183, 211);
+    --fitalic: rgb(173, 84, 158);
+    --flink: rgb(184, 42, 153);
+    --fcode: var(--pink4);
+    --hlbg: lime !important; 
+    --comcolor: var(--purple3);
 
-    .theme-light .workspace-tab-header,
-    .theme-light .workspace-tab-header.is-after-active,
-    .theme-light .workspace-tab-header.is-before-active {
-        color: var(--green8);
-    }
+    /* # Header Colors*/
+    --head1: var(--green12);
+    --head2: var(--green13);
+    --head3: rgb(88, 175, 179);
+    --head4: rgb(111, 185, 161);
+    --head5: var(--gray3);
+    --head6: var(--gray2);
 
-    .theme-light .workspace-tab-header.is-active {
-        border: 2px solid var(--green9);
-    }
+    /* # Tags*/
+    --tborder: rgb(62, 175, 86);
+    --tb4: " ";
+    --tcolor: rgb(64, 190, 81);
+    --tcol1: rgb(92, 194, 61);
+    --tcol2: rgb(39, 189, 39);
+    --tcol3: rgb(111, 185, 61);
 
-    /*Side Dock Ribbon*/
+    /* # Bullets/Numbers*/
+    --blcol: rgb(38, 190, 18);
+    --bul-b4: "🍀";
 
-    .theme-light .side-dock-ribbon-action,
-    .theme-light .workspace-ribbon-collapse-btn {
-        color: var(--green8)
-    }
+    /* # Checklist*/
+    --checkcol: rgba(87, 214, 114, 0.733);;
+    --cshad: 1px 1px 2px #49d137;
 
-    /*collapsed side dock*/
-    .theme-light .workspace-ribbon.is-collapsed .side-dock-ribbon-action {
-        border: var(--green6) 1px solid;
-        box-shadow: inset -4px -4px 4px -3px var(--green11);
-        color: var(--green8);
-    }
+    --untask: rgb(114, 123, 128);
+    --task: rgb(99, 192, 111);
 
-    /*Status Bar*/
-    .theme-light .status-bar {
-        border-top: var(--green11) solid 1px;
-    }
+    /* # Blockquotes*/
+    --bq-col: var(--green6);
+    --equote: var(--green8);
 
-/*CCP 5: Settings*/
-    /*CCP 5.1: Settings*/
-    .theme-light .modal.mod-settings .vertical-tab-header,
-    .theme-light .vertical-tab-nav-item {
-        background-color: var(--green4);
-        border-radius: 20px;
-    }
-    
-    .theme-light .vertical-tab-nav-item.is-active {
-        background-color: var(--pink13);
-        border-radius: 10px;
-    } 
-    
-    .theme-light .vertical-tab-header-group-title {
-        background-color: var(--green12);
-    }
-    
-    /*CCP 5.2: Theme Store*/
-    .theme-light .modal-title {
-        color: var(--green13);
-    }
-    
-    /*CCP 5.3 Plugin Store*/
-    .theme-light .community-plugin-search {
-        background-color: var(--green2);
-    }
+    /* # Table*/
+    --thead: rgb(98, 218, 138);
+    --td: rgb(166, 224, 174);
+    --tbcol1: rgba(210, 252, 215, 0.555);
+    --tbcol2: rgba(222, 250, 221, 0.589);
+    --tbcol3: rgba(193, 250, 210, 0.205);
+    --thov:  rgb(204, 247, 206);
 
-/*CCP 6: Other Elements*/
-    /*Scrollbar*/
-    .theme-light ::-webkit-scrollbar-thumb {
-        background-color: var(--background-secondary);
-        border: 2px solid var(--green9);
-        }
+    --todd: var(--green8);
+    --teven: rgb(107, 107, 107);
+    --ttext: var(--green8);
 
-    /*Sliders*/
-    .theme-light input[type="range"] {
-        background-color: var(--green3);
-    }
+    /* # HR*/
+    --hrcon: "🍀";
+    --hrcol: rgb(51, 173, 81);
+    --hrtrans: translate(-50%, -50%) rotate(0deg);
 
-    .theme-light input[type="range"]::-webkit-slider-thumb {
-        background-color: var(--pink13);
-    }
+    /* # Progress Bars*/
+    --prcol2: var(--dp1);
+    --prcol1: var(--dp2);
+    --prcol3: var(--dp3);
+    --prcol4: var(--dp4);
+    --prcol5: var(--dp5);
+    --prcol6: var(--dp6);
+    --prcol7: var(--dp7);
+    --prcol8: var(--dp8);
+    --prcol9: var(--dp9);
+    --prcol10: var(--dp10);
+    --prbg: rgba(235, 217, 232, 0.726);
 
-    /*Notice*/
-    .theme-light .notice {
-        background-color: var(--pink3);
-        box-shadow: 5px 5px 20px -2px var(--pink8);
-    }
-
-    /*Toggle*/
-    .theme-light .checkbox-container::after {
-        content: "🌱";
-          background-color: transparent !important;
-          top: -8px;
-          left: -2px;
-          font-size: 15px;
-          transform: rotate(0deg);
-      }
-      
-      
-      .theme-light .checkbox-container.is-enabled::after {
-          content: "🌿";
-          background-color: transparent !important;
-          top: -7px;
-          left: 18px;
-          font-size: 20px;
-          transform: rotate(0deg);
-      }
-    
-    .theme-light .checkbox-container.is-enabled {
-        background-color: var(--green3);
-    }
-
-    /*HR*/
- .theme-light div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
-    content: '';
-    background: var(--green8);
-    }
-
-
-    .theme-light div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
-        content: " 🌿";
-        color: var(--green8) !important;
-        transform: translate(-50%, -50%) rotate(0deg);
-        transform-origin: 50% 50%;
-    }
-
-.theme-light .markdown-preview-view hr {
-    color: var(--green8);
+    /* # Cite*/
+    --ctcol: rgb(25, 153, 46);
+    --ctcon: var(--teal1);
+    --ct-a4: "🍀 ";
+    --ct-b4: " 🍀";
 }
 
-.theme-light .markdown-preview-view hr::after {
-    content: "🌿";
-    transform: translate(-50%, -50%) rotate(0deg);
-    transform-origin: 50% 50%;
-    color: var(--green8) !important;
+/* @ MINT GREEN D: Additional Snippets*/
+.theme-light.mint-green {
+    --kodd: rgb(173, 231, 198);
+    --keven: rgb(189, 231, 193);
+    --khov: rgb(115, 221, 186);
+
+    --metacon1: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAC/ElEQVRYhe2WOUwUURjHfzM7uwu7KMsRLo14wIJH8IiinZpYmhhjSAyFFnbGxlIbLa1sbPGKkcLCqLGz0IiGxqw3EXWXILDI6S7D7DXHs9iZuCAgkh0a/Scv+Wbm5f1/833vzXzwr0taZb+gPfYDl4Hp5QKEgU7gENACVAHeIgAl/zShEXgAmIAoxlACXj1YH7Ts64iyhPkJ4DpQLiuyse7gequuvUEJNYfwrfUheeQVvDAAykjPMK+vvgKILgZwCrgBeGr31Wfbzu7y+0P+lRr+ptSoZgAKEFsI4LBj3tq5zWjqCBfP2ZY6pGpAORCdn8caoBvwNHe0mE0d4aVKtGJpI6pph7H5AFeAuoqWylT4ZKvHDXOA1ETKZ4dzMrAHOC3JkrH7/N6AJLvzibB0E13Tg4AODBUCXATkTUc3m4HagCvmAKmxFAgkYBAwHIBG4JgkS+aW481F33RzATQnjAI4AGcApe5AQ9ofKnHTHy2uCTuMFQIcA9hwZEOZq+5AMpZI2WG/A7ARaJM8klG5vdptfybfTzhHsNcBaAcINVfMeHyunTwAsoksmanMGkAFIg7AToCqHdWlrroD8RfDgnwL8BQwHICtAGUNZa4CCEsQffjFqf9t574MNAAEaoJu+vPtyaDITGaCwGfgUSFAPUCJixVIxpJ87Hpn2JcXsNMP+V9iCEApdWEDCoi/HOHttYhuGZYX6ALuF05RgBIAj794Pz4jbTDaG2fgcVSfGUh6ybdvd4Bz8+cq9kNk3991OMIS5NQcupojp+ZIfddQh1Sm+6bMxNcfkjCFbK89Alwi32OI+esoQA7wC1MgKRLa6CwTkXGmP02TmUqLbCJrWropLMMSZtZ06iSMtLFYyjzka9wD3ATuAenFXkQBsoBf/abS393HeGSskFOy5yyYBGCyYMSBD8Ab4Dkws5hpoSRgDKiRvTKWbgHMkt8oz4AvwJQNqdvPHCVYIKUrUYxfbfMt7FOxmuoFBDJ3V9sY8humGggj6GSZdfuvYuonZjcXMbFw5AYAAAAASUVORK5CYII=");
+    --metacon2: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAADnElEQVRYhe2WTWhcVRTHf/e9Ox/J3EknJjZNW21XFWlMwWoKbjSWIoi2SBdKi4pE22IVoQvBIqjYhe7UhavaGopdKAQVbTQiamstfsWKMf3KhE6+SKSJ8x1m5r4cFzMZ0jYJTZ3pRv/w4N73zju//zvn3cuF/7rUjYQ1NTWFMplMSCm1SUReBaauyUA4HF4nIjuA+4DbgAbAVwFPCb3Y02AwuEZr/baIPAw4FQBijLH1DTe5w7EhBQwuaMAYsx14D1imfT774NaHZtq3bNbrW1qI1NejfYt6X0z6i88+Z/++FwGi82YJhUJPAIcA997723MvH3gt0NDYcL3AqzQyNGwBLSJXV8AY0z4L37vvBduxZ1egYuSSBs4PZIBljuNEL+urMWY5cBRwn352t9exZ9d113kxDV286AHMzMwMXmZARN4AVrRsaM3ufn6vWw04wNjoqB9Aax0tL8Pa2to7Hcf52XXdmU++6tYrV6+qCjyXy3FP60YREZtOp2vLFXAcZz/gPPb4Tq9acICxkVFERAExwDpQXO/ANsdxvCef6aj4TzdXo8Mjs8MolDYXrXUHoDc/sGW68ebGavIZjsWkNBwsGwC2AWzd/oipKh3o7/szCyAi5wCcSCSyFmjVWtuNbXdXm88vP/7kAbiuewrAsda2Aay/oyUZDAarCp+8NMnE+EQYSCWTyV4otmADwF2b2mqqSgd6jnULxSPAN4CdNXA7wK1r11TVgOd5dB48nC1NO2fvOyKyEmDVLauryefjj7rkr/HxEHA+nU5/WjaglGoGWNHcXDX42f4zvPn6AVuavkSp/FBsQQSgprbyHRAReo5189SjOwu2YH3AwXQ63TU3RgNBgGBN5QxkM1m+/rKHo51HCufOnPUBPqXUkVQq9dyVsZrS2S4QWNoO7HkeiXiCRDxOIh5nODbE4ECU337t9fr/6FPWWqeUe1Qp9UoqlToEyJV5NJAHAp7n4TgOQ7EYPxz/nt97TzMxPi5/T055uXxObKEg09lpl2IWyWYyC50VXIo9PiEihzOZzIfA9EIfooEcEIheGODdt97h5HcnECkbVaWY+STApTnXGNCnlDrt8/mOT01NJRerYBlgjJkAlvv9fvL5PEBaKdUFfAtcEJFJ13Vz+Xy+4Pf707MvJhKJOPOUdMkKhUKDxhgxxkg4HH4/EolE/nXSpcgYc8oYI3V1dR/cUHBJbiAQaATWWWt3WGuvqW//q5L6B/7KVNsoJYy9AAAAAElFTkSuQmCC");
+    --metacol1: var(--green1);
+    --metacol2: var(--green1);
+    --hfm-bc: green;
+
+    --lpcol: rgb(54, 185, 87);
+    --lb-bg: rgb(220, 248, 217);
+    --lpgif: url("https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/theme%20image/cute%20pupper.gif?raw=true");
 }
 
-/*Aside*/
-.theme-light aside:hover {
-    border: 1px solid var(--pink3);
-    border-right: 4px solid var(--pink3);
-    border-bottom: 4px solid var(--pink3);
+/* @ MINT GREEN E: Plugins*/
+.theme-light.mint-green {
+    --adico: rgb(12, 107, 44);
+    --adshad: rgba(173, 230, 195, 0.795);
+
+    --fico: rgb(77, 102, 87);
+    --subfico: rgb(83, 189, 145);
+
+    --calcol: var(--green8);
+    --calshad: 1px 0px 15px 1px rgb(135, 235, 188);
+    --calbor: rgb(135, 235, 160) solid 2px;
+    --calbg: white;
+
+    --dpline: var(--gray1);
+    --dpdot: var(--gray1);
+    --dptitle: var(--green8);
+    --dpnow: var(--green8);
+    --dphov: var(--green2);
+    --dpshad: 0px 0px 52px -18px rgba(102, 18, 91, 0.75);
+
+    --dp1: #d1f4d0;
+    --dp2: #cbefca;
+    --dp3: #c5eac4;
+    --dp4: #bfe4be;
+    --dp5: #c2ebc7;
+    --dp6: #b3dab3;
+    --dp7: #add5ad;
+    --dp8: #a7cfa7;
+    --dp9: #a1caa1;
+    --dp10: #9bc59b;
+
+    --checkcol2: rgb(100, 209, 118);
+    --chbg: rgb(217, 243, 219);
+
+    --msbg: var(--green13);
 }
-
-/*Tags Edit*/
-.theme-light .cm-s-obsidian span.cm-hashtag {
-    background: rgb(237,255,255);
-    background: radial-gradient(circle, var(--green2) 69%, vaR(--green3) 100%);
-    color: var(--green8);
-    border-top: var(--green12) 1px solid;
-    border-bottom: var(--green12) 1px solid;
-}
-
-.theme-light .cm-s-obsidian span.cm-hashtag-end {
-    border-right: var(--pink13) 1px solid;
-}
-
-/*Tags Preview*/
-.theme-light .tag {
-    background: rgb(237,255,255);
-    background: radial-gradient(circle, rgba(237,255,255,1) 69%, var(--green2) 100%);
-    border: 1px solid var(--green12);
-    color: var(--green8);
-}
-
-.theme-light .tag:hover {
-    color: black;
-    background-color: var(--peach1) !important;
-    border: var(--peach2) 1px solid !important;
-}
-
- /*Quotes*/
-.theme-light div:not(.CodeMirror-activeline)>.HyperMD-quote {
-    background-color: var(--background-secondary); 
-    border-color: var(--green13)!important; 
-}
-
-.theme-light .markdown-preview-view blockquote {
-    border-left: 0.2em solid var(--green12);
-    border-top: 0.1em solid var(--green12);
-    border-bottom: 0.2em solid var(--green12);
-    border-right: 0.1em solid var(--green12);
-    
-    box-shadow: 0px 2px 2px 0px var(--green13);
-
-}
-
-.theme-light .markdown-preview-view blockquote:hover:before {
-    background: radial-gradient(circle, white 0%, white 13%, var(--green3) 47%, var(--green13) 78%);
-}
-
-/*HTML*/
-.theme-light cite {
-    color: var(--green8);
-}
-
-.theme-light cite::before,
-.theme-light cite::after {
-    content: "🍀";
-    padding: 8px;
-    font-size: 15px;
-}
-
-/*Codeblock*/
-.theme-light .cm-s-obsidian .HyperMD-codeblock {
-    line-height: 1.3;
-    color: var(--purple4) !important;
-    font-size: 0.85em;
-    background-color: var(--green2);
-    }
-
-/*Table*/
-.theme-light table {
-    background-color: var(--green5);
-    border: var(--green8) 1px solid !important;
-}
-
-.theme-light tr:nth-child(6n+1) {
-    background-color: var(--green9) !important;
-}
-
-.theme-light table thead th:hover,
-.theme-light table thead tr:hover,
-.theme-light table th:hover,
-.theme-light table tr:hover {
-background-color: var(--green12);
-}
-
-.theme-light .markdown-preview-view table th,
-.theme-light .markdown-preview-view table td {
-    border-color: var(--green12);
-}
-
-
-/*Lists*/
-.theme-light .cm-hmd-list-indent .cm-tab::before, 
-.theme-light ul ul::before {
-content:'';
-border-left: 1px solid var(--green12);
-position: absolute;
-}
-
-.theme-light span.cm-formatting-list-ul:after {
-    content: "🍀";
-    font-size: 12px;
-    }
-
-    /*Checklist Preview*/
-    .theme-light .markdown-preview-view .task-list-item-checkbox::before {
-        color: rgb(143, 145, 22);
-        text-shadow: 1px 2px 2px #d8cf5686;
-    }
-    
-    .theme-light .markdown-preview-view .task-list-item-checkbox:checked:before {
-        color: rgb(235, 136, 23);
-    }
-
-    /*Checklist Edit*/
-    .theme-light .cm-s-obsidian span.cm-formatting-task {
-        color: var(--gray1);
-    }
-
-    .theme-light .cm-s-obsidian span.cm-formatting-task.cm-property {
-        color: var(--teal1);
-    }
-    
-/*CCP 7: Additional*/
-    /*Pseudo Kanban*/
-    .theme-light .kanban ul ul li:nth-child(even) {
-        background: var(--green3);
-      }
-      
-      .theme-light .kanban ul ul li:nth-child(odd) {
-        background: var(--lgrad6);
-      }
-
-    /*Loading Page*/
-    .theme-light .progress-bar {
-        background-color: var(--background-secondary) !important;
-        color: black;
-    }
-
-    /*Horizontal Scroll*/
-    
-    .hscroll table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-    
-/*CCP8- Plugins*/
-    /*Icon Folder Plugin*/
-    /*subfolder icons as light blue*/
-    .theme-light .obsidian-icon-folder-icon {
-        color: var(--green7);
-        }
-    
-    /*Calendar Plugin*/
-    .theme-light .day.svelte-q3wqg9 {
-        color: var(--green7) !important;
-        font-weight: bolder;
-        font-size: 1em !important;
-        height: 40px !important;
-    }
-    
-    .theme-light .day.svelte-q3wqg9:hover {
-    box-shadow: 1px 0px 15px 1px var(--green12);
-        border: var(--green12) solid 2px !important;
-        background-color: white !important;}
-    
-    .theme-light th.svelte-pcimu8 {
-        color: white;
-    }
-    
-    /*Fantasy Calendar*/
-    .theme-light .fantasy-title.svelte-10wwl4f {
-        color: var(--green8);
-    }
-    
-    .theme-light .day.svelte-3pptg2 {
-        color: var(--green8) !important;
-    }
-    
-    .theme-light .day.svelte-3pptg2:hover {
-        box-shadow: 1px 0px 15px 1px var(--green12);
-        border: var(--green12) solid 2px !important;
-        background-color: white !important;}
-    
-    /*Rich Links*/
-    .theme-light .rich-link-card {
-        border: 3px solid var(--green12);
-    }
-    
-    .theme-light h1.rich-link-card-title {
-        color: var(--green12) !important; }
-    
-    /*Daily Stats*/
-    .theme-light .color-empty {
-        fill: rgb(240, 251, 252);
-    }
-    
-    .theme-light text {
-        fill: var(--green13);
-    }
-    
-    /* Day Planner*/
-    .theme-light .aside_line {
-        background: var(--green7) !important;
-    }
-
-    .theme-light .ei_Dot {
-        background-color: var(--green7) !important;
-
-    }
-    
-
-    .theme-light .ei_Title {
-        color: var(--green8) !important;
-        font-weight: bold;
-    }
-    
-    .theme-light .event_item {
-      overflow: hidden !important;
-    }
-    
-    .theme-light #now-line, .timeline-time {
-      background-color: var(--green7) !important;
-    }
-    
-    .theme-light .event_item:hover {
-      background-color: var(--background-secondary) !important;
-      box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
-    }
-    
-    .theme-light .event_item_color1 {
-      background-color: #d1f4d0 !important;
-    }
-    
-    .theme-light .event_item_color2 {
-      background-color: #cbefca !important;
-    }
-    
-    .theme-light .event_item_color3 {
-      background-color: #c5eac4 !important;
-    }
-    
-    .theme-light .event_item_color4 {
-      background-color: #bfe4be !important;
-    }
-    
-    .theme-light .event_item_color5 {
-      background-color: #c2ebc7 !important;
-    }
-    
-    .theme-light .event_item_color6 {
-      background-color: #b3dab3 !important;
-    }
-    
-    .theme-light .event_item_color7 {
-      background-color: #add5ad !important;
-    }
-    
-    .theme-light .event_item_color8 {
-      background-color: #a7cfa7 !important;
-    }
-    
-    .theme-light .event_item_color9 {
-      background-color: #a1caa1 !important;
-    }
-    
-    .theme-light .event_item_color10 {
-      background-color: #9bc59b !important;
-    }
