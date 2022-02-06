@@ -1,635 +1,319 @@
-/*Used Colors*/
-
-/*BXM 1: Basic Colors*/
-.theme-dark {
+/* @ BLUE XMAS A: GENERAL COLORS */
+.theme-dark.bl-xmas {
     --background-primary: var(--dblue5);
     --background-primary-alt: transparent;
     --background-secondary:var(--dblue4);
     --background-secondary-alt:var(--dblue5);
-    --background-modifier-border: rgba(8, 24, 58, 0.452);
 
     --text-accent: var(--teal1);
     --text-accent-hover: var(--teal2);
-    --text-highlight-bg: var(--blue8);
-    --text-selection: var(--blue8);
+    --text-normal: var(--lblue7);
     --text-error: orange;
+
+    --text-highlight-bg: var(--hlbg);
+    --text-selection: var(--hlbg);
 
     --interactive-accent: var(--blue2);
     --interactive-hover: white;
     --interactive-accent-hover: var(--blue2);
-    }
 
-/*BXM 2: Specific Panes*/
-    /*BXM 2.1 File Explorer*/
+    --migrad1: var(--fgrad3);
+    --migrad2: rgb(107, 106, 106);
+    --migrad3: rgb(43, 68, 85);
 
-        /*Header Image*/
-        .theme-dark .workspace-leaf-content[data-type="file-explorer"]
-        .nav-header::after {
-            content: "";
-            display: block;
-            background: center / contain no-repeat url("https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/theme%20image/Santa_Sleigh_1-removebg-preview.png?raw=true");
-            width: 230px; height: 130px;
-            margin-top: -25px;
-            margin-bottom: -40px;
-            margin-left: 0%;
-            border-radius: none}
+    --mitext1: rgb(90, 134, 228);
+    --mitext2: rgb(154, 155, 160);
+    --mitext3: rgb(104, 215, 230);
+
+    --mgrad1: rgb(190, 141, 33);
+    --mgrad2: rgb(75, 148, 196);
+    --mgrad3: rgb(138, 132, 137);
+    --mgrad4: rgb(100, 92, 209);
+    --mgrad5: rgb(43, 156, 156);
+    --mgrad6: rgb(226, 103, 199);
+}
+
+/* @ BLUE XMAS B: WORKSPACE */
+    .theme-dark.bl-xmas {
+        /* ! Icons */
+        --col-svg: rgb(140, 161, 173);
+        --cola-svg: rgb(141, 96, 12);
+
+        /* ! Vault Title*/
+        --vtcolor1:  #dee0e9;
+        --vtcolor2: #966409;
+
+        /* ! Header Image*/
+        --dhead-img: url("https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/theme%20image/Santa_Sleigh_1-removebg-preview.png?raw=true");
+        --dhi-h: 130px;
+        --dhi-w: 230px;
+        --dhi-mt: -45px;
+        --dhi-mb: -30px;
+        --dhi-ml: 5%;    
+
+        /* ! Header Icon */
+        --hic-ico: var(--lhic-ico);
+        --lhic-ico: var(--svg-vault);
+        --hic-fsize: 5px;
+
+        /* ! Header Text */
+        --lht-text: 👋 I hope you have a great day!;
+        --lht-fsize: 20px;
+        --ht-fcol: rgb(90, 171, 236);
+
+        /* ! Folder Container*/
+        --fx-folcol: rgb(202, 151, 57);
+        --fx-tfolcol: rgb(231, 238, 245);
+        --fx-ficol: var(--text-normal);
+        --fi-act: rgb(94, 173, 209);
+        --fcol-in: var(--lblue2);
+
+        /* ! Iterative Folder Colors*/
+        --fgrad1: rgb(20, 50, 95); 
+        --fgrad2: rgb(26, 56, 121);
+        --fgrad3: rgb(22, 60, 129);
+        --fgrad4: rgb(17, 57, 114);
+        --fgrad5: rgba(21, 43, 117, 0.836);
+        --fgrad6: rgba(16, 34, 92, 0.849);
+        --fgrad7: rgb(17, 19, 85);
+        --fgrad8: rgb(7, 23, 77);
+
+        /* ! Active Note Title Bar*/
+        --m-vhead: rgba(6, 24, 66, 0.824);
+
+        --ant-col1: rgba(12, 82, 139, 0.63);
+        --ant-col2: rgba(52, 107, 179, 0.71);
+        --ant-col3: rgba(85, 207, 237, 0.24) ;
+
+        --act-svg: rgb(175, 136, 8);
+
+        /* ! Metadata Codeblock*/
+        --trule: rgb(218, 137, 218);
+        --tstring: rgb(101, 176, 226);
+
+        /* ! Document Search */
+        --ds-bg: rgb(5, 16, 48); 
+        --ds-err: rgba(124, 91, 177, 0.664);
+
+        /* ! Empty Note*/
+        --es-con: "(◕‸◕ )";
+        --es-col: rgb(117, 93, 13);
+        --es-dfsize: 1.5em;
+        --es-dtfize: 1.5em;
+
+        /* ! Workspace Tab Header*/
+        --wth-trans: scale(1.05);
+        --col-tbar: rgb(196, 145, 35);
+
+        /* ! Tag Pane Flair*/
+        --dfborder: 3px; 
+        --dtree-b4: "★"; 
+        --dfl-fil: rgb(39, 110, 151) 0px 0px 5px, rgb(71, 139, 184) 0px 0px 10px, rgb(137, 184, 216) 0px 0px 15px, #2d88ff 0px 0px 20px, #2df1ffb6 0px 0px 30px, 2px 2px 2px rgba(55, 163, 206, 0);
+        --dhov-sh: 10px 10px 4px rgb(60, 178, 194);
         
-        /*Vault Title*/
-        .theme-dark .nav-folder.mod-root > .nav-file-title, .theme-dark .nav-folder.mod-root > .nav-folder-title {
-            font-size: 26px;
-            font-family: var(--font-var-space-header);
-            font-weight: 500;
-            padding-top: 10px;
-            padding-bottom: 5px;
-            background: #a2acec;
-            background: repeating-linear-gradient(to top, #dee0e9 0%, #966409 80%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        --flair1: rgb(216, 161, 60);
+        --flair2: rgb(192, 237, 255);
+        --flair3: rgb(173, 170, 175);
+        --flair4: rgb(217, 186, 243);
+        --flair5: rgb(179, 236, 240);
+        --flair6: rgb(236, 195, 234); 
 
-        /*Folder Colors*/
-        .theme-dark {
-            --grad1: rgb(20, 50, 95); 
-            --grad2: rgb(26, 56, 121);
-            --grad3: rgb(22, 60, 129);
-            --grad4: rgb(17, 57, 114);
-            --grad5: rgba(21, 43, 117, 0.836);
-            --grad6: rgba(16, 34, 92, 0.849);
-            --grad7: rgb(17, 19, 85);
-            --grad8: rgb(7, 23, 77);
-        }
+        /* ! Graph*/
+        --garrow:  rgb(117, 174, 184);
+        --gtag: #18947f;
+        --gattach: #083daf;
+        --gfill:  rgb(117, 174, 184);
+        --gunfill: #3c68c791;
+        --gcircle: var(--text-normal);
+        --gline: var(--blue8);
+        --gtext: var(--text-normal);
+        --ghl: var(--gold2);
+        --glhl: var(--blue2);
 
-        /*Collapse Icon*/
-        .theme-dark .collapse-icon svg {
-            color: var(--gold6) !important;
-        }
+        /* ! Side Dock Ribbon*/
+        --srbor: transparent;
+        --sbort: #549bc4af solid 1px;
+        --sborl: #e7d6a7b9 solid 1px;
+        --srshad: inset -4px -4px 4px -3px #608caad0;
+        --srbr: 8px;
+        --srcol: rgb(217, 241, 237);
 
-    /*BXM 2.2 Graph*/
-    .theme-dark .graph-view.color-fill {
-        color: rgb(117, 174, 184);
+        /* ! Modal*/
+        --mbg: rgb(4, 24, 49);
+        --mgbg: rgb(141, 107, 12);
+        --mo-bg: linear-gradient(191deg, rgba(53, 66, 143, 0.336) 0%, rgba(3, 19, 35, 0.445) 29%, rgba(20, 66, 97, 0.295) 60%, rgba(63, 57, 6, 0.144) 76%, rgba(73, 61, 8, 0.301) 96%);
+
+        /* ! Store Items*/
+        --theme-sel: rgb(133, 92, 31);
+        --button-col: rgb(202, 217, 224);
+        --button-bg:linear-gradient(rgb(7, 31, 66), #422908);
+
+        /* # Buttons */
+        --bbor: transparent;
+        --bbort: #549bc4af 2px solid;
+        --bborl: #a7d5e7b9 1px solid;
+        --bshad: inset -4px -4px 4px -3px #a8722cd0;
+
+        --bwarn: rgb(138, 108, 27);
+        --bwbort: rgb(119, 95, 28) 2px solid;
+        --bwborl: rgb(212, 130, 24) 1px solid;
+        --bwshad: inset -4px -4px 4px -3px rgb(145, 107, 57);
+
+        /* # Scrollbar*/
+        --gscroll1: rgba(219, 176, 96, 0.466);
+        --gscroll2: rgba(77, 138, 218, 0.795);
+        --gscroll3: rgba(78, 149, 237, 0.753);
+        --gscroll4: rgba(144, 194, 196, 0.829);
+        --gscroll5: rgba(98, 184, 241, 0.589);
+
+        /* # Slider*/
+        --slide1: rgb(50, 87, 122);
+        --slide2: rgb(148, 112, 58);
+
+        /* # Notice*/
+        --nbg: rgba(158, 128, 28, 0.911);
+        --nshad: rgb(153, 99, 28);
+
+        /* # Toggle*/
+        --togcon: "❄️";
+        --togcona: "❄️";
+        --togbg: rgb(184, 192, 206);
+        --togsz: 20px;
+
+        /* # Dropdown */
+        --dbor: transparent;
+        --dbort: #549bc4af 2px solid;
+        --dborl: #a7d5e7b9 1px solid;
+        --dshad: inset -4px -4px 4px -3px #a8722cd0;
     }
 
-    .theme-dark .graph-view.color-line {
-        color: var(--blue8);
-    }
+/* @ BLUE XMAS C: MARKDOWN*/
+.theme-dark.bl-xmas {
+    --fbold: var(--gold2);
+    --fitalic: var(--blue9);
+    --flink: var(--text-accent);
+    --fcode: var(--cream2);
+    --hlbg: rgb(12, 64, 88);
+    --comcolor: rgb(135, 209, 228);
 
-    .theme-dark .graph-view.color-fill-tag {
-        color: var(--gold1);
-    }
+    /* # Header Colors*/
+    --head1: rgb(38, 93, 175);
+    --head2: rgb(75, 132, 196);
+    --head3: rgb(84, 118, 163);
+    --head4: rgb(127, 149, 175);
+    --head5: rgb(136, 101, 35);
+    --head6: rgb(160, 147, 124);
 
-    .theme-dark .graph-view.color-text {
-        color: var(--lblue3);
-    }
+    /* # Tags*/
+    --tborder: rgb(9, 69, 94);
+    --tb4: "🌟";
+    --tcolor: rgb(245, 237, 242);
+    --tcol1: rgb(10, 18, 68);
+    --tcol2: rgb(13, 35, 94);
+    --tcol3: rgb(9, 18, 70); 
 
-    .theme-dark .graph-view.color-fill-unresolved {
-        color: var(--purple3);
-    }
+    /* # Bullets/Numbers*/
+    --blcol: var(--gold1);
+    --bul-b4: var(--tree-b4);
 
-    /*BXM 2.3 Tag and Outline Pane*/
-        /*COUNTER*/
-        .theme-dark .tag-container .tree-item .tree-item-flair {
-            border: solid 1px rgb(32, 109, 139);
-            color: rgb(91, 172, 204);
-            background-color: var(--background-secondary);
-            padding: 4px;
-            padding-left: 6px;
-            padding-right: 6px;
-          }
-          
-        .theme-dark .tag-container .tree-item >.tree-item-children >.tree-item >.tree-item-children .tree-item .tree-item-flair {
-        border: solid 1px rgb(117, 115, 119);
-        color: rgb(142, 140, 145);
-        background-color: var(--background-secondary);
-        }
-        
-        .theme-dark .tag-container .tree-item  >.tree-item-children .tree-item .tree-item-flair {
-            border: solid 1px rgb(107, 67, 15);
-            background-color: var(--background-secondary);
-            color: rgb(230, 163, 77);
-        }
+    /* # Checklist*/
+    --uncheck: "\2606";
+    --check: "\2605";
+    --checkcol: var(--gold1);
+    --cshad: none;
+    --untask: rgb(107, 156, 221);
+    --task: rgb(202, 129, 18);
 
-        /*GRADIENT SNOWFLAKES*/
-        .theme-dark .tag-container .tree-item .tree-item-self .tree-item-inner::before {
-            color: rgb(32, 109, 139);
-        }
+    /* # Blockquotes*/
+    --bq-col: var(--gold1);
+    --equote: var(--blue4) ;
 
-        .theme-dark .tag-container .tree-item .tree-item-self .tree-item-inner {
-            color: rgb(32, 109, 139);
-            border-bottom: rgb(32, 109, 139) solid 1px;
-        }
+    /* # Table*/
+    --thead: rgb(8, 25, 80);
+    --td: rgb(5, 19, 37);
+    --tbcol1: rgba(9, 11, 43, 0.788);
+    --tbcol2: rgba(2, 12, 59, 0.637);
+    --tbcol3: rgba(2, 18, 51, 0.671);
+    --thov:  rgb(16, 23, 88);
+    --todd: rgb(23, 107, 175);
+    --teven: rgb(59, 116, 180);
+    --ttext: rgb(155, 112, 21);
+    --tfhead: rgb(150, 120, 38);
 
-        .theme-dark .tag-container .tree-item .tree-item-self .tree-item-inner:hover,
-        .theme-dark .outline .tree-item .tree-item-self .tree-item-inner:hover {
-            text-shadow: 2px 3px 15px #3AB9CE;
-        }
+     /* # HR*/
+    --hrcon: "🌟";
+    --hrcol: rgb(0, 174, 255);
+    --hrtrans: translate(-50%, -50%) rotate(0deg);
 
-        .theme-dark .tag-container .collapse-icon svg,
-        .theme-dark .outline .collapse-icon svg {
-            color: var(--purple1) !important;
-        }
+    /* # Progress Bars*/
+    --prcol2: var(--dp1);
+    --prcol1: var(--dp2);
+    --prcol3: var(--dp3);
+    --prcol4: var(--dp4);
+    --prcol5: var(--dp5);
+    --prcol6: var(--dp6);
+    --prcol7: var(--dp7);
+    --prcol8: var(--dp8);
+    --prcol9: var(--dp9);
+    --prcol10: var(--dp10);
+    --prbg: rgba(146, 150, 175, 0.678);
 
-        .theme-dark .tag-container .tree-item >.tree-item-children >.tree-item >.tree-item-children .tree-item-self .tree-item-inner::before{
-            content: "★" ;
-            color: rgb(117, 123, 126);
-            font-size: 15px;
-          }
+    /* # Cite*/
+    --ctcol: rgb(114, 184, 250);
+    --ctcon: rgb(180, 137, 56);
+    --ct-b4: "★";
+    --ct-a4: "★";
+}
 
-          .theme-dark .tag-container .tree-item >.tree-item-children >.tree-item >.tree-item-children .tree-item-self .tree-item-inner {
-            color: rgb(164, 169, 172);
-            border-bottom: none;
-          }
+/* @ BLUE XMAS D: Additional Snippets*/
+.theme-dark.bl-xmas {
+    --kodd: rgb(17, 33, 77);
+    --keven: rgb(9, 43, 87);
+    --khov: rgb(82, 57, 20);
 
-          .theme-dark .tag-container .tree-item > .tree-item-children .tree-item-self .tree-item-inner::before {
-            color: var(--gold1);
-          }
-          
-          .theme-dark .tag-container .tree-item > .tree-item-children .tree-item-self .tree-item-inner {
-            color: rgb(187, 143, 76);
-            border-bottom: none;
-          }
-          
-/*BXM 2.3 Outline Pane*/
-.theme-dark .outline .tree-item .tree-item-self .tree-item-inner::before {
-    content: "❄";
-    font-size: 14px;
-  }
+    --metacon1: "✫";
+    --metacon2: "✫";
+    --metacol1: var(--gold2);
+    --metacol2: rgb(43, 151, 201);
 
-    .theme-dark .outline .tree-item .tree-item-self .tree-item-inner::before {
-        color: rgb(32, 109, 139);
-    }
+    --lpcol: white;
+    --lb-bg: rgb(12, 31, 73);
+    --lpgif: url("https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/theme%20image/cute%20pupper.gif?raw=true");
 
-    .theme-dark .outline .tree-item .tree-item-self .tree-item-inner {
-        color: rgb(80, 168, 202);
-        border-bottom: rgb(32, 109, 139) solid 1px;
-    }
+    --as-bg: rgba(190, 155, 59, 0.664);
+}
 
+/* @ BLUE XMAS E: Plugins*/
+.theme-dark.bl-xmas {
+    --adico: rgb(207, 197, 170) !important;
+    --adshad: rgba(77, 78, 80, 0.521);
     
-    .theme-dark .outline .tree-item >.tree-item-children .tree-item-self .tree-item-inner {
-        color: white;
-        font-size: 1em;
-        border-bottom: transparent;
-        }
+    --fico: rgb(204, 227, 241);
+    --subfico: var(--gold2);
 
-    .theme-dark .outline .tree-item >.tree-item-children .tree-item-self .tree-item-inner::before{
-        content: "★";
-        color: var(--lblue5);
-    }
+    --calcol: white;
+    --calshad:  1px 0px 15px 1px var(--blue2);
+    --calbor: var(--blue2) solid 2px;
+    --calbg: transparent;
 
-    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before {
-        color: var(--blue3);
-    }
-
-    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before{
-    color: var(--blue5);
-    }
-
-    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children .tree-item-self .tree-item-inner::before{
-    color: var(--blue6);
-    }
-
-    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children .tree-item-self.tree-item-inner::before {
-    color: var(--teal1);
-    }
-
-    .theme-dark .outline .tree-item >.tree-item-children >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children  >.tree-item > .tree-item-children.tree-item-self .tree-item-inner::before{
-    color: var(--blue8);
-    }
-
-/*BXM 3: Text Colors*/
-    /*Headers*/
-    .theme-dark {
-    --header1: rgb(38, 93, 175);
-    --header2: rgb(75, 132, 196);
-    --header3: rgb(84, 118, 163);
-    --header4: rgb(127, 149, 175);
-    --header5: rgb(136, 101, 35);
-    --header6: rgb(160, 147, 124);}
-
-    /*Bold*/
-    .theme-dark .cm-strong,
-    .theme-dark strong {
-        color: var(--gold2);
-    }
-
-    /*Inline Code*/
-    .theme-dark .cm-s-obsidian span.cm-inline-code, 
-    .theme-dark .markdown-preview-view code {
-    color: var(--cream2);
-    }
-
-    /*Comment*/
-    .theme-dark .cm-s-obsidian span.cm-comment {
-    color: var(--blue5);
-    font-weight: bold;
-    }
-
-/*BXM 4: Workspace Layout*/
-
-    /*Active Note*/
-    .theme-dark .workspace-leaf.mod-active .view-header {
-    background: rgb(35,104,195);
-    background: linear-gradient(90deg, rgba(23, 87, 206, 0.87) 3%, rgba(74, 113, 221, 0.808) 10%, rgba(155, 178, 241, 0.11) 58%);
-    border-bottom: 2px solid rgba(98, 99, 102, 0.452);
-        }
-
-    .theme-dark .workspace-leaf.mod-active .view-header-icon {
-        color: rgb(255, 255, 255);
-    }
-
-    /*Search Bar*/
-    .theme-dark .document-search-container {
-        background-color: var(--blue8);
-    }
-
-    .theme-dark .document-search-button {
-        background-color: var(--gray1);
-        color: black;
-    }
-
-    /*Frontmatter*/
-    .theme-dark .frontmatter-container-header {
-        background: rgb(35,104,195);
-        background: linear-gradient(90deg, rgba(23, 87, 206, 0.87) 3%, rgba(74, 113, 221, 0.808) 10%, rgba(155, 178, 241, 0.11) 58%);
-        border-bottom: 2px solid rgba(98, 99, 102, 0.452);
-        color: white;
-    }
-
-    /*Side Dock Ribbon*/
-    .theme-dark .workspace-ribbon.is-collapsed .side-dock-ribbon-action {
-        box-shadow: inset -4px -4px 4px -3px #4881ebd0;
-        border-top: #aac5d48a solid 1px;
-        border-left: #ecb00c85 solid 1px;
-    }
-
-/*BXM 6: Other Elements*/
-    /*Scrollbar*/
-    .theme-dark ::-webkit-scrollbar-thumb {
-        background: rgba(44, 183, 207, 0.692);
-        background: linear-gradient(351deg, rgba(47, 99, 158, 0.74) 29%, rgba(77, 138, 218, 0.795) 50%, rgba(78, 149, 237, 0.753) 70%, rgba(111, 183, 211, 0.808) 81%, rgba(35, 127, 233, 0.589) 92%);
-   }
-
-   .theme-dark .modal-content h2 {
-    color: var(--header5);
-    }
-
-    /*Button*/
-    .theme-dark button.mod-warning {
-        background-color: rgb(134, 85, 12);
-        color: white;
-    }
-
-    .theme-dark.theme-dark .modal button:not(.mod-cta):not(.mod-warning){
-        background-color: rgba(101, 170, 226, 0.712) !important;
-    }
-
-    .theme-dark .modal-title {
-        color: var(--gold1);
-    }
-
-   /*Slider*/
-   .theme-dark input[type="range"]::-webkit-slider-thumb {
-    background-color: var(--blue1);
-   }
-
-   /*Toggle*/
-   .theme-dark .checkbox-container::after {
-    content: "❆";
-    background-color: transparent !important;
-    top: -4px;
-    left: -2px;
-    font-size: 25px;
-    transform: rotate(0deg);
-    }
-
-    .theme-dark .checkbox-container.is-enabled::after {
-        content: "❆";
-        color: black;
-        background-color: transparent !important;
-        top: 1px;
-        left: 16px;
-        font-size: 28px;
-        transform: rotate(340deg);
-    }
-
-    .theme-dark .checkbox-container.is-enabled {
-        background-color: var(--blue1);
-        background-image: none;
-        transform: none;
-    }
-
-    /*HR*/
-    .theme-dark div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
-        content: '🎄'; 
-        transform: translate(-50%, -50%) rotate(0deg);
-        transform-origin: 50% 50%;
-    }
-
-    .theme-dark .markdown-preview-view hr::after {
-        content: "🎄";
-    transform: translate(-50%, -50%) rotate(0deg);
-    transform-origin: 50% 50%;}
-
-    /*Aside*/
-    .theme-dark aside:hover {
-        border: 1px solid var(--blue2) !important;
-        border-right: 4px solid var(--blue2) !important;
-        border-bottom: 4px solid var(--blue2) !important;
-    }
-
-    /*Tags Edit*/
-    .theme-dark .cm-s-obsidian span.cm-hashtag {
-        border-top: 1px solid rgb(70, 118, 145) ;
-        border-bottom: 1px solid rgb(70, 118, 145) ;
-    }
-
-    .theme-dark .cm-s-obsidian span.cm-hashtag::before {
-        content: '❄️';
-    }
-
-    /*Tags Preview*/
-    .theme-dark .tag {
-        background: rgba(103, 122, 219, 0.055);
-        background: radial-gradient(circle, rgba(63, 94, 251, 0.24) 0%, rgba(70, 128, 252, 0.205) 100%);
-        border: 1px solid rgb(63, 84, 139);
-        color: var(--lblue3);
-    }
-
-    .theme-dark .tag::before {
-        content: '❄';
-        padding-right: 3px;
-        color: rgb(235, 222, 189);
-        font-size: 15px;
-    }
-
-    /*Quote*/
-    .theme-dark .markdown-preview-view blockquote {
-        border-left: 0.2em solid rgba(21, 42, 110, 0.897);
-        border-top: 0.1em solid rgba(66, 83, 180, 0.747);
-        border-bottom: 0.2em solid rgba(37, 77, 163, 0.74);
-        border-right: 0.1em solid rgba(28, 58, 153, 0.637);
-        padding-top: 10px;
-        -webkit-box-shadow: 0px 2px 10px 0px #2f24ac59; 
-        box-shadow: 0px 2px 10px 0px #352aac49;
-        }
-
-        /*quotation mark*/
-        .theme-dark .markdown-preview-view blockquote:hover::before {
-            color: rgb(14, 78, 151);
-            content: "“";
-            background: whitesmoke;
-            box-shadow: 0 4px 5px -1px rgba(20, 65, 150, 0.808);
-             }
-
-        .theme-dark cite {
-            color: var(--blue7);
-        }
-
-        .theme-dark cite::before {
-            content: "❆ ";
-            color: whitesmoke;
-        }
+    --dpline: var(--gold1);
+    --dpdot: var(--gold1);
+    --dptitle: white;
+    --dpnow: var(--blue2);
+    --dphov: rgb(31, 81, 128);;
+    --dpshad: 0px 0px 52px -18px rgba(18, 52, 102, 0.75);
     
-        .theme-dark cite::after {
-            content: " ❆";
-            color: whitesmoke;
-        }
+    --dp1: var(--fgrad1);
+    --dp2: var(--fgrad2);
+    --dp3: var(--fgrad3);
+    --dp4: var(--fgrad4);
+    --dp5: var(--fgrad5);
+    --dp6: var(--fgrad6);
+    --dp7: var(--fgrad7);
+    --dp8: var(--fgrad8);
+    --dp9: #1a1e57;
+    --dp10: #191b75;
 
-    /*Table*/
-    .theme-dark table {
-        background-color: rgb(0, 153, 255);
-        border-radius: 10px;
-    }
-
-    .theme-dark table tr:nth-child(6n+2) {
-        background-color: rgb(59, 88, 219);
-    }
-
-    .theme-dark table tr:nth-child(6n+3) {
-        background-color: rgba(97, 75, 194, 0.644);
-    }
-
-    .theme-dark table tr:nth-child(6n+4) {
-        background-color: rgba(74, 106, 194, 0.849);
-    }
-
-    .theme-dark table tr:nth-child(6n+5) {
-        background-color: rgba(57, 78, 172, 0.548);
-    }
-
-    .theme-dark table tr:nth-child(6n) {
-        background-color: rgba(36, 38, 173, 0.479);
-    }
-
-    .theme-dark table tr:nth-child(6n+1) {
-        background-color: rgb(83, 120, 224);
-    }
-
-    .theme-dark table th {
-        background-color: var(--blue2);
-        border: 1px solid var(--blue2);
-    }
-
-    .theme-dark table th:hover {
-        background-color: var(--blue3);
-    }
-
-    /*Lists*/
-    .theme-dark span.cm-formatting-list-ul:after {
-        content: "❆ ";
-        color: var(--blue1);
-    }
-
-    /*Checklist Edit*/
-    .theme-dark .cm-s-obsidian span.cm-formatting-task {
-        font-weight: 50;
-        color: rgba(194, 198, 201, 0.74) !important;
-        }
-            
-        .theme-dark .cm-s-obsidian span.cm-formatting-task.cm-property{
-        font-weight: 500 !important;
-        color: rgb(192, 134, 25) !important;
-        }
-
-
-/*BXM 7: Pseudo Kanban*/
-    .theme-dark .kanban ul ul li:nth-child(even) {
-        background-color: var(--grad1);
-    }
-
-    .theme-dark .kanban ul  ul li:nth-child(odd) {
-        background-color: var(--grad2);
-    }
-
-/*BXM 8: Plugins*/
-    /*Calendar*/
-    .theme-dark .day.svelte-q3wqg9:hover {
-        box-shadow: 1px 0px 15px 1px var(--blue1);
-        border: var(--blue2) solid 2px !important;     }
-
-    .theme-dark th.svelte-pcimu8 {
-        color: white;
-    }
-
-    /*Fantasy Calendar*/
-    .theme-dark .day.svelte-3pptg2:hover {
-        box-shadow: 1px 0px 15px 1px var(--blue1);
-        border: var(--blue2) solid 2px !important;     }
-         
-    /*Rich Links*/
-    .theme-dark .rich-link-card {
-        border: 2px solid var(--blue6);
-    }
-
-    .theme-dark h1.rich-link-card-title {
-        color: var(--teal2);
-    }
-
-    /*Daily Stats*/
-    .theme-dark .color-empty {
-        fill: rgb(139, 139, 139) !important;
-    }
-
-    /*MySnippets*/
- 
-    .theme-dark .MySnippets-statusbar-menu .checkbox-container.is-enabled::after {
-        content: "❆";
-        color: black;
-        background-color: transparent !important;
-        top: -5px;
-        left: 13px;
-        font-size: 28px;
-        transform: rotate(340deg);
-    }
-
-    /*Theme Store*/
-    .theme-dark .community-theme:nth-child(3n) {
-        border: rgb(121, 118, 118) 3px solid;
-        color: rgb(176, 179, 178);
-    }
-    
-    .theme-dark .community-theme:nth-child(3n) button.mod-cta{
-        background-color: rgb(94, 87, 87);
-        color: white;
-    }
-
-    .theme-dark .community-theme:nth-child(3n):hover {
-        background-color: rgb(82, 82, 82);
-        transform: scale(1.05);
-        color: white;
-    }
-    
-    .theme-dark .community-theme:nth-child(3n+2) {
-        border: rgb(131, 77, 27) 3px solid;
-        color: rgb(216, 150, 27);
-    }
-
-    .theme-dark .community-theme:nth-child(3n+2) button.mod-cta {
-        background-color: rgb(150, 90, 34);
-        color: white;
-    }
-    
-    .theme-dark .community-theme:nth-child(3n+2):hover {
-        background-color: var(--gold2);
-        transform: scale(1.05);
-        color: white;
-        border: none;
-    }
-
-    .theme-dark .community-theme-info,
-    .theme-dark .community-plugin-downloads-text,
-    .theme-dark .community-theme-downloads,
-    .theme-dark .clickable-icon {
-        color: white;
-    }
-
-    /*Selected*/
-    .theme-dark .community-theme.is-selected {
-        background-color: rgb(36, 74, 117);
-        border: none;
-        color: white;
-    }
-    
-    .theme-dark .community-theme.is-selected button.mod-cta {
-         color: white;
-    }
-    
-    .theme-dark .community-theme.is-selected:hover {
-        background-color: transparent;
-        border: var(--gold1) solid 2px;
-        color: white;
-    }
-
-    /*Plugin Store*/
-    .theme-dark .community-plugin-item:nth-child(3n) {
-        border: rgb(121, 118, 118) 3px solid;
-        color: rgb(176, 179, 178);
-    }
-    
-    .theme-dark .community-plugin-item:nth-child(3n) button.mod-cta{
-        background-color: rgb(94, 87, 87);
-        color: white;
-    }
-
-    .theme-dark .community-plugin-item:nth-child(3n):hover {
-        background-color: rgb(82, 82, 82);
-        transform: scale(1.05);
-        color: white;
-    }
-    
-    .theme-dark .community-plugin-item:nth-child(3n+2) {
-        border: rgb(131, 77, 27) 3px solid;
-        color: rgb(216, 150, 27);
-    }
-
-    .theme-dark .community-plugin-item:nth-child(3n+2) button.mod-cta {
-        background-color: rgb(80, 46, 13);
-        color: white;
-    }
-    
-    .theme-dark .community-plugin-item:nth-child(3n+2):hover {
-        background-color: rgb(150, 104, 6);
-        transform: scale(1.05);
-        color: white;
-        border: none;
-    }
-
-    .theme-dark .community-plugin-item-info,
-    .theme-dark .community-plugin-downloads-text,
-    .theme-dark .community-plugin-item-downloads,
-    .theme-dark .clickable-icon {
-        color: white;
-    }
-
-    /*Day Planner*/
-    .theme-dark .event_item_color9 {
-        background-color: #1b257a !important;
-      }
-
-      .theme-dark .event_item:hover {
-          background-color: rgba(139, 96, 16, 0.616) !important;
-      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    --checkcol2: rgb(145, 113, 26);
+    --chbg: rgb(11, 23, 49);
+}
