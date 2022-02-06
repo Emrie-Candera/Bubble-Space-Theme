@@ -5,7 +5,7 @@
 .theme-dark .progress-bar-message::before {
     content: ""; display: block;
     
-    background: center / contain no-repeat url("https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/theme%20image/cute%20solar%20system.gif?raw=true");
+    background: center / contain no-repeat url("https://github.com/Emrie-Candera/Bubble-Space-Theme/blob/main/theme%20image/Astronaut.gif?raw=true");
 
     width: 600px; height: 300px;
 
