@@ -1,0 +1,227 @@
+/* ~~~~~~~~~~~~~~~~~~ AS A: Pub-Image Flags from Lithou  ~~~~~~~~~~~~~~~~~~ */
+/* @ AS A1: Pub-Image Flags */
+/* ? Check documentation here: https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Image-Styling */
+
+    /* # A.1 Size Declaration*/
+    span.image-embed, img{
+        --coremarg: 1%; 
+        --extramarg: 1%; /* added margin between items */
+        --defaultwidth: 40%; /*default width for core flags*/
+        --minwidth: 50px; /*minimum width for %based width image*/
+        --defaultzoomwidth: 100%; 
+        --defaultscale: 1.5; 
+    }
+    
+    /* # A1.2 Image Positions*/
+        /* ! A1.2.1 Side */
+        img[alt*="side"],
+        .internal-embed.image-embed.is-loaded[alt*="side"] {
+            float: right;
+            margin: 0px;
+            margin-left: var(--coremarg);
+            margin-top: 0px;
+        }
+
+        /* ! A1.2.2 Right*/
+        img[alt*="right"], 
+        .internal-embed.image-embed.is-loaded[alt*="right"] {
+            float: right !important;
+            margin: 0px;
+            margin-left: var(--extramarg);
+            margin-top: 0px;
+        }
+
+        /* ! A1.2.3 Left*/
+        img[alt*="left"],
+        .internal-embed.image-embed.is-loaded[alt*="left"] {
+            float: left !important;
+            margin: 0px;
+            margin-right: 10px;
+            margin-bottom: -10px;
+            margin-top: 0px;
+        }
+
+        /* ! A1.2.4 Grid*/
+        span[alt*="grid"] {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3px;    
+        }
+    
+        img[alt*="grid"],
+        .internal-embed.image-embed.is-loaded[alt*="grid"] {
+            max-height: 30vh;
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+        
+        img[alt*="grid"]:hover,
+        .internal-embed.image-embed.is-loaded[alt*="grid"]:hover {
+            transform: scale(1.5);
+        }
+
+    /* # A1.3 Image Sizes*/
+        /* ! A1.3.1 Thumbnail*/
+        img[alt*="thumb"]{width: 12% !important; margin-top: 10px;}
+
+        /* ! A1.3.2 Small*/
+        img[alt*="sm"]{width: 20%; margin-top: 10px;}
+
+        /* ! A1.3.3 Medium*/
+        img[alt*="med"]{width: 25%;margin-top: 10px;}    
+        
+        /* ! A1.3.4 Large*/
+        img[alt*="lg"]{width: 50%;margin-top: 10px;}
+
+        /* ! A1.3.5 Huge*/
+        img[alt*="huge"]{width: 67%;margin-top: 10px;}
+
+        /* ! A1.3.6 Column Width*/
+        img[alt*="cwidth"]{float: none;margin-left: 0%;width: 120%;margin-top: 10px;}
+
+    /* # A1.4 Image Shapes and Orientation*/
+        /* ! A1.4.1 Portrait*/
+        span[alt*="portrait"],
+        .internal-embed.image-embed.is-loaded[alt*="portrait"] {
+            float: left;
+            position: relative;
+            width: 40%;
+            vertical-align: top;
+            border: solid 5px;
+            clip-path: ellipse(40% 49% at 50% 50%);
+            }
+    
+        img[alt*="portrait"],
+        .internal-embed.image-embed.is-loaded[alt*="portrait"]{
+            clip-path: ellipse(40% 49% at 50% 50%);
+            vertical-align: top;
+            }
+            
+        /* ! A1.4.2 Landscape*/
+        span[alt*="landscape"],
+        .internal-embed.image-embed.is-loaded[alt*="landscape"]{
+            float: left;
+            position: relative;
+            width: 40%;
+            vertical-align: top;
+            border: solid 5px;
+            clip-path: ellipse(46% 36% at 50% 50%);
+            }
+
+        img[alt*="landscape"],
+        .internal-embed.image-embed.is-loaded[alt*="landscape"]{
+            vertical-align: top;
+            clip-path: ellipse(45% 35% at 50% 50%);
+        }
+
+        /* ! A1.4.3 Baner*/
+        .internal-embed.image-embed.is-loaded[alt*="banner"]{
+            display: block;
+            height: 100px;
+            overflow: hidden;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        img[alt*="banner"]{
+            display: block;
+            height: 100px;
+            overflow: hidden;
+            margin-top: 10px;
+            width: 100%;
+}
+        /* ! A1.4.4 HR*/
+        .internal-embed.image-embed.is-loaded[alt*="hr"]{
+            display: block;
+            height: 20px !important;
+            overflow: hidden;
+            width: 100%;
+            border-radius: 20px;
+        }
+    
+        img[alt*="hr"]{
+            display: block;
+            height: 10px !important;
+            overflow: hidden;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+    /* # A1.5 Styles*/
+        /* ! A1.5.1 Tape*/
+        span[alt*="+tape"],
+        .internal-embed.image-embed.is-loaded[alt*="+tape"]{
+            position: relative;
+            float: right;
+            width: var(--defaultwidth);
+            min-width: var(--minwidth);
+            margin: auto;
+            margin-left: var(--coremarg);
+            transform: rotate(2deg);
+            }
+
+        span[alt*="+tape"]::before,
+        .internal-embed.image-embed.is-loaded[alt*="+tape"]::before {
+            content: "";
+            position: absolute;
+            margin: auto;
+            width: 30%;
+            height: 14%;
+            top: -2%;
+            left: 35%;
+            background: rgba(118, 182, 255, 0.377); /*here you can chosse the scotch tape background*/
+            clip-path: polygon(50% 0%, 100% 0%, 
+            98% 10%, 100% 20%, 98% 30%, 100% 40%, 98% 50%, 100% 60%, 98% 70%, 100% 80%, 98% 90%,100% 100%,
+            0% 100%, 2% 90%, 0% 80%, 2% 70%, 0% 60%, 2% 50%, 0% 40%, 2% 30%, 0% 20%, 2% 10%, 0% 0%);  
+            }    
+
+        /* ! A1.5.2 Push Pin*/
+        span[alt*="+pin"],
+        .internal-embed.image-embed.is-loaded[alt*="+pin"] {
+            position: relative;
+            float: right;
+            width: var(--defaultwidth);
+            min-width: var(--minwidth);
+            margin: auto;
+            margin-left: var(--coremarg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(2deg);}
+        
+            span[alt*="+pin"]::before,
+        .internal-embed.image-embed.is-loaded[alt*="+pin"]::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #45cccc;
+            top: 4%;
+            left: 45%; 
+            border: solid #339299 8px;
+            border-radius: 50%;
+            box-shadow: #186c8d -5px 3px 1px;}   
+
+        /* ! A1.5.3 Borders*/ 
+        img[alt*="-blborder"]{border: solid black 3px;}
+        img[alt*="-whborder"]{border: solid white 3px;}
+        img[alt*="-bradius1"]{border-radius: 10px;}
+        img[alt*="-bradius2"]{border-radius: 20px;}
+        img[alt*="-bradiustl"]{border-top-left-radius: 20px;}
+        img[alt*="-bradiusbr"]{border-bottom-right-radius: 20px;}
+        img[alt*="-bradiustr"]{border-top-right-radius: 20px;}
+        img[alt*="-bradiusbl"]{border-bottom-left-radius: 20px;}
+        img[alt*="-bthick"]{border: solid var(--text-normal); border-width: 10px;}
+        img[alt*="-bthin"]{border: solid var(--text-normal); border-width: 1px;}
+
+        /* ! A1.5.4 Shadows*/
+        img[alt*="-shadow"]{
+            -webkit-box-shadow: 5px 5px 15px -4px #6e4f9b; 
+            box-shadow: 5px 5px 15px -4px #5e4680;
+        }
+    
+        img[alt*="-glow"]{
+            -webkit-box-shadow: -1px 0px 15px 1px #65f7ff8f; 
+            box-shadow: -1px 0px 15px 1px #65f7ff8e;
+        }
