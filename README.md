@@ -45,3 +45,4 @@ See more [here](https://github.com/Emrie-Candera/Bubble-Space-Theme/wiki/Bubble-
 * ⭐[v1.3](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.3)- December 12, 2021
 * ⭐[v1.4](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.4)- January 5, 2022
 * ⭐[v1.5](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.5)- February 7, 2022
+* ⭐Quick Fix update [v1.6](https://github.com/Emrie-Candera/Bubble-Space-Theme/releases/tag/v1.6)- June 6, 2022
