@@ -2305,8 +2305,8 @@ svg.dot-network {
         content: var(--togcon);
         color: var(--togbg);
         background-color: transparent !important;
-        top: -2px;
-        left: 0px;
+        top: -5px !important;
+        left: 5px;
         font-size: var(--togsz);
         transform: rotate(41deg);
     }
@@ -2315,7 +2315,7 @@ svg.dot-network {
         content: var(--togcona);
         color: var(--text-normal);
         background-color: transparent !important;
-        top: -2px;
+        top: -5px !important;
         left: 18px;
         font-size: var(--togsz);
         transform: var(--togtrans);
@@ -2674,15 +2674,17 @@ input[type='text'], input[type='search'], input[type='email'], input[type='passw
 
 /* ~~~~~~~~~~~~~~~~~~ MARKDOWN B: LISTS ~~~~~~~~~~~~~~~~~~ */
 /* @ MARKDOWN B1: Bulleted List*/
-ul li::marker,
-.markdown-source-view.mod-cm6 .list-bullet::after,
-.markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before   {
-        content: var(--bul-b4);
-        font-size: 13px;
-        color: var(--blcol); 
-        visibility: visible !important;
-        padding-left: 5px !important;
-    }
+.list-bullet:before  {
+    content: var(--bul-b4) !important;
+    font-size: 14px !important;
+    color: var(--blcol) !important; 
+    visibility: visible !important;
+    padding-left: 5px !important;
+}
+
+.list-bullet:after {
+    display: none !important;
+}
 
 .cm-s-obsidian .cm-formatting-list-ul::before {
     margin-right: -5px;
@@ -2728,8 +2730,11 @@ ul {
         cursor:pointer;
         position:relative;
         margin-top: 7px;
-        top: -15px;
-        }
+        top: -15px !important;
+    }
+    .task-list-item-checkbox::before {
+        font-size: 15.5pt;
+    }
 
     .markdown-preview-view .task-list-item-checkbox {
         visibility:hidden !important;
